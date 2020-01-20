@@ -1,0 +1,99 @@
+* { 
+    padding:0 ; 
+    margin:0 ;
+} 
+
+
+/* start header */
+.header { 
+    padding:15px; 
+    display:flex; 
+    justify-content: flex-end;
+} 
+.header a { 
+    color:black;
+    padding:10px; 
+    text-decoration:none; 
+    text-transform:capitalize;
+} 
+.header a:last-of-type { 
+    background:blue; 
+    color:white; 
+    font-weight:bold;
+}
+.header a:hover { 
+    text-decoration:underline; 
+    color:#555;
+}
+/* end  header */ 
+/* start main */ 
+.main .image { 
+    display:flex;
+    justify-content:center;
+
+ } 
+ 
+.main .search { 
+    display:flex;
+    justify-content:center;
+}
+ 
+.main .search  input[type="search"] { 
+    margin:20px;
+    padding:16px; 
+    width: 640px; 
+    border : 1px solid rgb(212, 208, 208) ; 
+ 
+ border-radius:25px;
+} 
+.main .search  input[type="search"]:focus { 
+    -moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.25); 
+    -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.25); 
+    -o-box-shadow: 0 0 15px rgba(0, 0, 0, 0.25); 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+}
+.main  .submit { 
+    display:flex; 
+    justify-content:center;
+}
+.main .submit input[type="submit"] { 
+    background:rgb(240, 237, 237); 
+    color:#555; 
+    padding:8px;
+    margin:5px; 
+
+    
+} 
+.main .submit input[type="submit"]:hover { 
+     border : 1px solid rgb(212, 208, 208) ; 
+}
+.main p {
+text-align:center; 
+margin-top:30px; 
+margin-bottom:97px; 
+}
+/* end main */ 
+/* start footer */
+.footer  { 
+    background:rgb(240, 237, 237); 
+    align-items:center; 
+    display:flex; 
+    justify-content:space-between; 
+    
+} 
+.footer .left { 
+    padding:15px;
+ } 
+
+.footer .left a { 
+    color:#555; 
+    padding:10px; 
+    display:inline;
+    text-decoration:none;
+} 
+.footer .left a:hover { 
+    text-decoration: underline;
+}
+
+
+/* end footer */
