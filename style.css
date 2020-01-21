@@ -45,19 +45,25 @@ body {
 .logo-img img { 
    
    width:500px; 
-
+   height:300px;
 
  } 
  .search span  { 
    position:absolute; 
-   right: 28%; 
-   top:52%;
+   right: 4%; 
+   bottom:25%;
 } 
-.main .search { position:relative; }
+.main .search {  
+   
+     position:relative; 
+     width:100%; 
+      max-width:640px; 
+      margin-left:350px;
+     }
 .main .search  input[type="search"] { 
     
     padding:16px; 
-    width: 640px; 
+    width: 100%; 
     border : 1px solid rgb(212, 208, 208) ; 
     outline:none;
  border-radius:25px;
