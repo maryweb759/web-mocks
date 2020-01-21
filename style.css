@@ -2,7 +2,10 @@
     padding:0 ; 
     margin:0 ;
 } 
-
+body { 
+    width:100vw ; 
+    height: 100vh ; 
+}
 
 /* start header */
 .header { 
@@ -12,38 +15,44 @@
 } 
 .header a { 
     color:black;
-    padding:10px; 
+    margin:10px; 
     text-decoration:none; 
-    text-transform:capitalize;
+    
 } 
-.header a:last-of-type { 
+.header button { 
     background:blue; 
     color:white; 
-    font-weight:bold;
+    font-size:15px; 
+    border:none; 
+    font-weight:bold; 
+    margin-top:8px; 
+
 }
-.header a:hover { 
+ a:hover { 
     text-decoration:underline; 
     color:#555;
 }
 /* end  header */ 
 /* start main */ 
-.main .image { 
-    display:flex;
-    justify-content:center;
+.main { text-align:center;}
+.logo-img img { 
+   margin-top:3%; 
+   width:500px; 
+   height:200px; 
 
  } 
- 
-.main .search { 
-    display:flex;
-    justify-content:center;
-}
- 
+ .search span  { 
+   position:absolute; 
+   right: 28%; 
+   top:52%;
+} 
+.main .search { position:relative; }
 .main .search  input[type="search"] { 
-    margin:20px;
+    margin-top:10px ;
     padding:16px; 
     width: 640px; 
     border : 1px solid rgb(212, 208, 208) ; 
- 
+    outline:none;
  border-radius:25px;
 } 
 .main .search  input[type="search"]:focus { 
@@ -52,17 +61,19 @@
     -o-box-shadow: 0 0 15px rgba(0, 0, 0, 0.25); 
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
 }
-.main  .submit { 
-    display:flex; 
-    justify-content:center;
-}
-.main .submit input[type="submit"] { 
+  button { 
     background:rgb(240, 237, 237); 
     color:#555; 
-    padding:8px;
-    margin:5px; 
-
-    
+    width:140px;
+   height:38px; 
+  margin-top:30px;
+  font-size:15px;
+   border:none; 
+   outline:none;
+   border-radius:6px;
+}
+button:hover { 
+   border:1px solid #beb8b8;
 } 
 .main .submit input[type="submit"]:hover { 
      border : 1px solid rgb(212, 208, 208) ; 
@@ -87,9 +98,10 @@ margin-bottom:97px;
 
 .footer .left a { 
     color:#555; 
-    padding:10px; 
+    padding:12px; 
     display:inline;
-    text-decoration:none;
+    text-decoration:none; 
+
 } 
 .footer .left a:hover { 
     text-decoration: underline;
