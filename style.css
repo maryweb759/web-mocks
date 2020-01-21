@@ -5,28 +5,35 @@
 body { 
     width:100vw ; 
     height: 100vh ; 
+} 
+.container { 
+    width:100%; 
+     height:100%; 
+    display:flex; 
+    flex-direction:column; 
+
 }
 
 /* start header */
 .header { 
-    padding:15px; 
+    padding:15px;
+    margin-right:20px;
     display:flex; 
     justify-content: flex-end;
 } 
 .header a { 
-    color:black;
-    margin:10px; 
-    text-decoration:none; 
-    
+    padding:8px 10px 8px 10px;  
+   text-decoration:none; 
+   color:rgb(34, 33, 33);
 } 
-.header button { 
-    background:blue; 
-    color:white; 
-    font-size:15px; 
-    border:none; 
-    font-weight:bold; 
-    margin-top:8px; 
-
+.header .btn { 
+   background:blue;
+   padding:8px 12px 8px 12px;   
+ border:none; 
+ color:white; 
+ font-weight:bold; 
+ border-radius:3px; 
+ opacity:.8;
 }
  a:hover { 
     text-decoration:underline; 
@@ -34,11 +41,11 @@ body {
 }
 /* end  header */ 
 /* start main */ 
-.main { text-align:center;}
+.main { text-align:center; flex:1;}
 .logo-img img { 
-   margin-top:3%; 
+   
    width:500px; 
-   height:200px; 
+
 
  } 
  .search span  { 
@@ -48,7 +55,7 @@ body {
 } 
 .main .search { position:relative; }
 .main .search  input[type="search"] { 
-    margin-top:10px ;
+    
     padding:16px; 
     width: 640px; 
     border : 1px solid rgb(212, 208, 208) ; 
@@ -61,7 +68,7 @@ body {
     -o-box-shadow: 0 0 15px rgba(0, 0, 0, 0.25); 
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
 }
-  button { 
+ .main button { 
     background:rgb(240, 237, 237); 
     color:#555; 
     width:140px;
@@ -72,7 +79,7 @@ body {
    outline:none;
    border-radius:6px;
 }
-button:hover { 
+.main button:hover { 
    border:1px solid #beb8b8;
 } 
 .main .submit input[type="submit"]:hover { 
@@ -82,6 +89,7 @@ button:hover {
 text-align:center; 
 margin-top:30px; 
 margin-bottom:97px; 
+color:rgb(34, 33, 33);
 }
 /* end main */ 
 /* start footer */
@@ -98,7 +106,7 @@ margin-bottom:97px;
 
 .footer .left a { 
     color:#555; 
-    padding:12px; 
+    padding:10px; 
     display:inline;
     text-decoration:none; 
 
