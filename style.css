@@ -56,9 +56,17 @@ form {
  } 
  .search span  { 
    position:absolute; 
-   right: 4%; 
-   bottom:25%;
+   right: 15px; 
+   bottom:228px; 
+  
 } 
+.search .srch { 
+    position:absolute; 
+    right: 611px; 
+    color:gray; 
+    bottom:230px; 
+}
+
 .main .search {  
    
      position:relative; 
@@ -67,8 +75,9 @@ form {
      
      }
 .main .search  input[type="search"] { 
-    
-    padding:16px; 
+    padding:15px 40px; 
+   
+   font-size:16px;
     width: 100%; 
     border : 1px solid rgb(212, 208, 208) ; 
     outline:none;
