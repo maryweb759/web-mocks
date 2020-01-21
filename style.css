@@ -96,7 +96,8 @@ form {
     color:#555; 
     width:140px;
    height:38px; 
-  margin-top:30px;
+  margin-top:30px; 
+  margin-bottom:15px;
   font-size:15px;
    border:none; 
    outline:none;
