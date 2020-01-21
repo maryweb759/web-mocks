@@ -63,7 +63,7 @@ form {
    position:absolute; 
    right: 20px; 
    top:19px; 
-  
+   cursor:pointer;
 } 
  .srch { 
     position:absolute; 
@@ -101,7 +101,8 @@ form {
   font-size:15px;
    border:none; 
    outline:none;
-   border-radius:6px;
+   border-radius:6px; 
+   cursor:pointer;
 }
 .main button:hover { 
    border:1px solid #beb8b8;
@@ -125,7 +126,8 @@ color:rgb(34, 33, 33);
     
 } 
 .footer .left { 
-    padding:15px;
+    padding:15px; 
+    cursor:pointer;
  } 
 
 .footer .left a { 
