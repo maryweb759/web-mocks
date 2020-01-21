@@ -41,7 +41,7 @@ body {
 }
 /* end  header */ 
 /* start main */ 
-.form { 
+form { 
     display:flex; 
     flex-direction:column; 
     justify-content:center; 
