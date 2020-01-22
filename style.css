@@ -5,7 +5,9 @@
 body { 
     width:100vw ; 
     height: 100vh ; 
+
 } 
+
 .container { 
     width:100%; 
      height:100%; 
@@ -54,9 +56,9 @@ form {
     
     }
 .logo-img img { 
-   
-   width:500px; 
-   height:300px;
+   max-width:500px;
+   width:100%; 
+ 
 
  } 
   .mic { 
@@ -74,13 +76,15 @@ form {
 
  .search { 
     position:relative; 
-    width:620px;
+    width:100%;
+    max-width:620px;
 }
 .main  input[type="search"] { 
     padding:15px 40px; 
     width:100%;
    font-size:16px;
   
+  margin-bottom:7px;
     border : 1px solid rgb(212, 208, 208) ; 
     outline:none;
  border-radius:25px;
@@ -90,14 +94,16 @@ form {
     -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.25); 
     -o-box-shadow: 0 0 15px rgba(0, 0, 0, 0.25); 
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
+} 
+form .btn { 
+    margin:0 7px;
 }
- .main button { 
+ form button { 
     background:rgb(240, 237, 237); 
     color:#555; 
     width:140px;
    height:38px; 
-  margin-top:30px; 
-  margin-bottom:15px;
+  margin:0 7px; 
   font-size:15px;
    border:none; 
    outline:none;
@@ -113,7 +119,7 @@ form {
 .main p {
 text-align:center; 
 margin-top:20px; 
-margin-bottom:20pxpx; 
+margin-bottom:10px; 
 color:rgb(34, 33, 33);
 }
 /* end main */ 
@@ -122,6 +128,7 @@ color:rgb(34, 33, 33);
     background:rgb(240, 237, 237); 
     align-items:center; 
     display:flex; 
+    margin-top:7px;
     justify-content:space-between; 
     
 } 
