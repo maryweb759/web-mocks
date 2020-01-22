@@ -38,15 +38,15 @@ body {
 .header a { 
     padding:8px 10px 8px 10px;  
    text-decoration:none; 
-   color:rgb(37, 36, 36); 
-   font-size:14px; 
-   font-family:Roboto-light ;
+   color:rgb(46, 44, 44); 
+   font-size:13px; 
+   font-family:Roboto-regular ;
 } 
 .header .btn { 
    background:rgb(18, 105, 236);
    padding:8px 12px 8px 12px;   
  border:none; 
- color:rgb(230, 224, 224); 
+ color:rgb(238, 232, 232); 
  font-weight:bold; 
  border-radius:3px; 
  opacity:.8; 
@@ -64,18 +64,18 @@ form {
     flex-direction:column; 
     justify-content:center; 
     align-items:center; 
-   
+    
 }
 .main { 
     text-align:center;
      flex:1; 
-     padding:15px;
+     padding:20px;
     
     }
 .logo-img img { 
    max-width:272px;
    width:100%; 
- 
+   padding:20px;
 
  } 
   .mic { 
@@ -120,12 +120,12 @@ form {
 } 
 form .btn { 
     margin:0 7px; 
-    padding:15px;
+    padding:20px;
   
 }
  form button { 
   
-    color:rgb(116, 113, 113); 
+    color:rgb(87, 83, 83); 
     width:140px;
    height:38px; 
   margin:0 7px; 
@@ -135,13 +135,13 @@ form .btn {
    border-radius:6px; 
    cursor:pointer; 
    font-family:Roboto-light ; 
-  
+   background:rgb(240, 240, 240); 
 }
 
 .main button:hover { 
-   border:1px solid #c4c2c2; 
-   color:black; 
-   background:rgb(245, 243, 243); 
+   border:1px solid #c9c4c4; 
+   color:rgb(51, 50, 50); 
+   background:rgb(243, 243, 243); 
 } 
    
 
@@ -189,7 +189,7 @@ color:rgb(94, 28, 148);
     color:rgb(110, 106, 106); 
     display:inline-block;
     text-decoration:none; 
-  
+    padding:8px;
   
 } 
 .footer .left a:hover { 
