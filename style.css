@@ -5,8 +5,12 @@
 body { 
     width:100vw ; 
     height: 100vh ; 
-
+   
 } 
+@font-face { 
+    src: url('fonts/Roboto-Italic.ttf') ; 
+    font-family: Roboto-Italic.ttf ;
+}
 
 .container { 
     width:100%; 
@@ -108,7 +112,8 @@ form .btn {
    border:none; 
    outline:none;
    border-radius:6px; 
-   cursor:pointer;
+   cursor:pointer; 
+   font-family: Roboto-Italic.ttf ;
 }
 .main button:hover { 
    border:1px solid #beb8b8;
