@@ -157,27 +157,27 @@ font-family:Roboto-light ;
 } 
 .main p::first-letter { 
     text-transform:uppercase; 
-    font-size:14px; 
+    font-size:15px; 
 } 
 .main p a:hover { 
 color:rgb(94, 28, 148);
 }
 /* end main */ 
 /* start footer */ 
-.footer a::first-letter { 
+.footer a div::first-letter { 
     text-transform:uppercase; 
-    font-size:20px;
-}
+    
+} 
+
 .footer  { 
     background:rgb(241, 238, 238); 
     align-items:center; 
     display:flex; 
     margin-top:7px;
     justify-content:space-between; 
-    padding:15px; 
+    padding:10px; 
     font-family:Roboto-regular ; 
-    font-size:13px; 
-   
+    font-size:14px; 
 } 
 
 .footer .left { 
@@ -187,9 +187,9 @@ color:rgb(94, 28, 148);
 
 .footer .left a { 
     color:rgb(110, 106, 106); 
-    display:inline;
+    display:inline-block;
     text-decoration:none; 
-    padding:10px; 
+  
   
 } 
 .footer .left a:hover { 
