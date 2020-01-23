@@ -110,7 +110,8 @@ form {
     -moz-box-shadow: 0 0 12px rgba(0, 0, 0, 0.20); 
     -webkit-box-shadow: 0 0 12px rgba(0, 0, 0, 0.20); 
     -o-box-shadow: 0 0 12px rgba(0, 0, 0, 0.20); 
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.20);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.20); 
+
 } 
 .main  input[type="search"]:focus { 
     -moz-box-shadow: 0 0 12px rgba(0, 0, 0, 0.20); 
@@ -159,8 +160,10 @@ font-family:Roboto-light ;
     text-transform:uppercase; 
     font-size:15px; 
 } 
+.main p a { text-decoration:none; color:rgb(34, 49, 180);  }
 .main p a:hover { 
-color:rgb(94, 28, 148);
+color:rgb(34, 49, 180); 
+text-decoration:underline;
 }
 /* end main */ 
 /* start footer */ 
