@@ -7,71 +7,134 @@
     <title>wikihow</title> 
     <link rel="stylesheet" href="style.css"> 
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Suez+One|Yeseva+One&display=swap" rel="stylesheet"> 
+
 </head> 
 <body> 
     <!-- start container--> 
 <div class="container"> 
-    <div class="header"> 
-        <!-- start nav-->
-        <nav class="menu"> 
-    <div id="logo">  <img src="images.png" alt="logo" ></div> 
-    <div class="search"> 
-        <input type="text" value="to do anything ..." > 
+
+
+    <div class="header "> 
+    <div class="menu">    
+  <div class="logo"> 
+    <h1>wiki<span>how</span>
+  </div>
+  <div class="search"> 
+    <input type="text" placeholder="to do anything ..." > 
+          <button> <span> <i class="fa fa-search fa-lg" aria-hidden="true"></i>
+          </span></button>  
+  </div> 
+  <div class="list-menu"> 
+    <label for="menu-btn" id="toggle"><i class="fa fa-bars fa-lg" aria-hidden="true"></i>  </label>
+    <input type="checkbox" id="menu-btn"> 
+    <ul> 
+      <li class="menu-item"><a href="">
+        <span><i class="fa fa-pencil fa-lg" aria-hidden="true"></i> </span>  edit
+      </a> 
+        <ul class="drop-down"> 
+          <li><a href=""> edit this article</a></li> 
+     </ul>
+     </li>
+     <li class="menu-item"><a href="">  <span><i class="fa fa-leaf  fa-lg" aria-hidden="true"></i>
+      </span> help us</a> 
+     <ul class="drop-down"> 
+      <li><a href=""> write an article</a></li>
+      <li><a href=""> request a new article</a></li>
+      <li><a href=""> more ideas..</a></li>
+  </ul>
+  </li>
+  <li class="menu-item"><a href="">  <span><i class="fa fa-wpexplorer  fa-lg" aria-hidden="true"></i>
+  </span> explorer </a> 
+      <ul class="drop-down"> 
+        <li><a href=""> community dashboard</a></li>
+        <li><a href=""> random article</a></li>
+        <li><a href=""> about us </a></li> 
+        <li><a href=""> categories </a></li>
+    </ul>
+  </li>  
+  <li class="menu-item" > <a href="">  <span> <i class="fa fa-user  fa-lg" aria-hidden="true"> </i> </span> log in</a> 
+   <ul class="drop-down"> 
+       <li> <a href="">facebook </a></li>
+       <li> <a href=""> google</a></li>
+       <li> <a href="">civic</a></li>
+       <li><a href="">wikihow </a></li>
+   </ul>
+</li>
+            
+  <li class="menu-item"><a href=""><span> <i class="fa fa-commenting fa-lg" aria-hidden="true"></i></span> 
+    messages </a> 
+  <ul class="drop-down"> 
+    <li> you have no notifications at this time. </li>
+  </ul>
+  </li>
+    </ul>
+  </div>
+  </div>
+  </div> 
+  
+
+    
+    <div class="header-screen"> 
+        <!--           start menu-screen      -->
+        <div class="menu-screen"> 
+    <div id="logo"> <h1>wiki<span>how</span></h1></div>
+    <div class="search">  
+        <input type="text" placeholder="to do anything ..." > 
         <button> <span> <i class="fa fa-search fa-lg" aria-hidden="true"></i>
         </span></button>  
-    </div> 
-     <!-- start ul-->
-    <ul class="list"> 
-        <li><a class="menu-item" href="">edit  <span><i class="fa fa-pencil fa-lg" aria-hidden="true"></i>
-        </span>
-        </a>  
-        <ul> 
-             <li><a href=""> edit this article</a></li> 
-        </ul>
-        </li>
-        <li><a  class="menu-item" href=""> help us <span><i class="fa fa-leaf  fa-lg" aria-hidden="true"></i>
-        </span>
-        </a> 
-            <ul> 
+    </div>
+     <div class="screen-list">  
+        <ul class="ul-list"> 
+           
+            <li> <a href="" > help us<span><i class="fa fa-leaf  fa-lg" aria-hidden="true"></i>
+            </span> </a> 
+            <ul class="dropdown"> 
                 <li><a href=""> write an article</a></li>
                 <li><a href=""> request a new article</a></li>
                 <li><a href=""> more ideas..</a></li>
             </ul>
         </li>
-        <li><a  class="menu-item" href=""> explorer <span><i class="fa fa-wpexplorer  fa-lg" aria-hidden="true"></i>
-        </span></a> 
-            <ul> 
+            <li> <a href="" > explorer <span><i class="fa fa-wpexplorer  fa-lg" aria-hidden="true"></i>
+            </span>
+            </a> 
+            <ul class="dropdown"> 
                 <li><a href=""> community in dashboard</a></li>
                 <li><a href=""> random article</a></li>
                 <li><a href=""> about us </a></li> 
                 <li><a href=""> categories </a></li>
             </ul>
-        </li>
-        <li><a  class="menu-item" href="">log in  <span> <i class="fa fa-user  fa-lg" aria-hidden="true"> </i> </span></a> 
-            <ul class="login"> 
+        </li>  
+            <li> <a href="" > log in <span> <i class="fa fa-user  fa-lg" aria-hidden="true"> </i> </span></a> 
+                <ul class="dropdown login"> 
+                    
+                 <li>  <span> <i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i> </span>
+                 </span> facebook </li>
+                 <li> <span> <i class="fa fa-google fa-2x" aria-hidden="true"></i>
+                 </span> google </li>
+                 <li><span> <i class="fa fa-tumblr-square fa-2x" aria-hidden="true"></i>
+                 </span> civic</li> 
+           
+                 <li> <span> <i class="fa fa-user-o fa-2x" aria-hidden="true"></i>
+                 </span> wikihow account</li>
+                </ul>
+               </li>
             
-                <li><a href=""> <span> <i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i>
-                </span> facebook</a></li>
-                <li><a href=""> <span> <i class="fa fa-google fa-2x" aria-hidden="true"></i>
-                </span> google </a></li>
-                <li><a href=""><span> <i class="fa fa-tumblr-square fa-2x" aria-hidden="true"></i>
-                </span> civic</a></li> 
+            <li> <a href="" > messages  <span> <i class="fa fa-commenting fa-lg" aria-hidden="true"></i></span> </a> 
           
-                <li><a href=""> <span><i class="fa fa-user-o fa-2x" aria-hidden="true"></i>
-                </span> wikihow account</a></li>
-               </ul>
-              </li>
-        <li><a  class="menu-item" href="">messages  <span> <i class="fa fa-commenting fa-lg" aria-hidden="true"></i></span> </a> 
-            <ul class="msg"> 
-                <li> you have no notifications at this time. </li>
-            </ul>
+                <ul class="dropdown msg"> 
+                    <li> you have no notifications at this time. </li>
+                </ul>
             </li>
+                 </ul>
+     </div>
+    </div> 
+    </div>
     
-    </ul> 
+  
      <!-- end ul-->
-    </nav> 
-     <!-- end nav-->
-</div>
+
+   
   <!-- end header--> 
   <!-- start slider--> 
    <div class="slider">   
@@ -115,20 +178,21 @@
           <div class="links">  
               <span> Explore this Article</span> 
               <hr>
-               <a href="#bottom">   getting supplies</a>  
-                <a href=""> mastering the basics </a>
-                <a href=""> pracricing your skills</a>
-                <a href="">article summary</a> 
-                <a href=""> questions & anszers</a> 
-                <a href="">related articles</a> 
+               <a href="#supplies" class="item" >   getting supplies</a>  
+                <a href="#basics" class="item"> mastering the basics </a>
+                <a href=""  class="item"> pracricing your skills</a>
+                <a href="#community"> questions & answers</a> 
+                <a href="#tips">tips and warnings</a> 
+                <a href="#related">related articles</a> 
                 <a href=""> references</a> 
+                <a href=""> article summary</a> 
           </div>
           </div>
         </div> 
         <div class="supplies"> <!-- start supplies-->
             <div class="top"> 
              <div class="part"> 
-                <p> part </p> 
+                <p> part <a href="" name="supplies"> </a></p> 
                 <span class="number">1</span>
              </div>
             
@@ -144,8 +208,8 @@
             </p>
         </div>
        <div class="basics">  <!-- start basics -->
-           <div class="img"> <img src="aid.jpg" style="width:100%"></div> 
-           <p>   <strong> Get basic pots and pans.  </strong>  A quick walk down a grocery store aisle will reveal a plethora of pots, pans,
+           <div class="img">  <img src="aid.jpg" style="width:100%"></div> 
+           <p>  <a href="" name="basics"></a>  <strong> Get basic pots and pans.  </strong>  A quick walk down a grocery store aisle will reveal a plethora of pots, pans,
                 and gadgets designed to make cooking easier. Ignore all of this, and start with the basics,
                  including a stock pot, a saucepan, and a griddle. These three items will take care of most of your
                   cooking needs.[2]  </p>
@@ -169,7 +233,7 @@
                 <div class="part"> 
                    <i class="fa fa-question-circle-o fa-3x" aria-hidden="true"></i>
                  </div>
-              <h1> community <span>q&a</span> </h1>
+              <h1>  <a href="" name="community"></a> community <span>q&a</span> </h1>
            </div> 
         <div class="question"> 
             <span> question</span> 
@@ -259,62 +323,65 @@
     </div>
    <div class="tips"> <!-- start tips -->
        <div class="top"> 
-           <h1> tips</h1>
+           <h1>  <a href="" name="tips"> </a> tips</h1>
        </div> 
-       <ul class="list"> 
-           <li> Start with easy recipes and move onto more difficult ones.</li> 
-           <li> Never vary cake or baking recipes. These, out of all the recipes, 
-               are most prone to failure when you fiddle with them. </li> 
-           <li> There are a lot of free YouTube videos put on by professional chefs that you can watch, as well.</li>
-       </ul>
+       <div class="advices">   
+           <p> Start with easy recipes and move onto more difficult ones. </p> 
+           <p>  Never vary cake or baking recipes. These, out of all the recipes, 
+            are most prone to failure when you fiddle with them</p>
+           <p>  There are a lot of free YouTube videos put on by professional chefs that you can watch, as well.
+        </p>
+    </div>
    </div> 
     <div class="tips"> <!-- start warning -->
        <div class="top"> 
          <h1> warning</h1>
        </div> 
-       <ul class="list"> 
-         <li> You may get discouraged if you don’t master everything quickly, but learning to cook takes time.
-             Give yourself time to learn without pressure.</li> 
-         <li> When you are starting out, you may have more food waste than you’d like. If you are too bothered by waste,
-              you can offer your leftovers or accidents to an animal at home, or to a composting service. </li> 
-         <li> Don’t cook for family immediately; this is one of the last steps for a reason. Only cook for others once you feel confident in your abilities,
-              as this may put too much pressure on you and give you a sour taste for cooking.</li>
-       </ul>
+       <div class="advices">     
+        <p>   You may get discouraged if you don’t master everything quickly, but learning to cook takes time.
+            Give yourself time to learn without pressure.</p>
+         <p>  When you are starting out, you may have more food waste than you’d like. If you are too bothered by waste,
+            you can offer your leftovers or accidents to an animal at home, or to a composting service. 
+            </p>
+         <p>  Don’t cook for family immediately; this is one of the last steps for a reason. Only cook for others once you feel confident in your abilities,
+            as this may put too much pressure on you and give you a sour taste for cooking.
+     </p> 
+    </div>
     </div>
        <div class="related"> <!-- start related-->
-           <h3> related wikihows</h3> 
+           <h3> <a href="" name="related"> </a> related wikihows</h3> 
            <div class="gallery">  
                <div class="row">     
            <div class="img">   <img src="gallery/8.jpg" alt="cooking image"> <span> how to<br>
                <strong>  pan broil meat </strong></span></div> 
-           <div class="img">   <img src="gallery/13.jpg" alt="cooking image"> <span> how to<br>
+           <div class="img">   <img src="gallery/6.jpeg" alt="cooking image"> <span> how to<br>
             <strong>  Make a graham cracker pie crust </strong></span></div> 
         <div class="img">   <img src="gallery/14.jpg" alt="cooking image"> <span> how to<br>
             <strong>  preheat an oven </strong></span> </div>  
         <div class="img">   <img src="gallery/1.jpg" alt="cooking image"> <span> how to<br>
-            <strong>  pan broil meat </strong></span></div> 
-        <div class="img">   <img src="gallery/15.jpg" alt="cooking image"> <span> how to<br>
-            <strong>  thicken curry </strong></span></div> 
-        <div class="img">   <img src="gallery/1.jpg" alt="cooking image"> <span> how to<br>
-            <strong>  pan broil meat </strong></span> </div> 
-        <div class="img">   <img src="gallery/1.jpg" alt="cooking image"> <span> how to<br>
-            <strong>  pan broil meat </strong></span> </div> 
+            <strong> boil water on the microwave </strong></span></div> 
+        <div class="img">   <img src="gallery/17.jpg" alt="cooking image"> <span> how to<br>
+            <strong>  measure a tablespoon </strong></span></div> 
+        <div class="img">   <img src="gallery/5.jpg" alt="cooking image"> <span> how to<br>
+            <strong>  cook </strong></span> </div> 
+        <div class="img">   <img src="gallery/16.jpg" alt="cooking image"> <span> how to<br>
+            <strong>  melt cheddar cheese </strong></span> </div> 
           </div>  
           <div class="row">     
             <div class="img">   <img src="gallery/2.jpg" alt="cooking image"> <span> how to<br>
-                <strong>  pan broil meat </strong></span></div> 
+                <strong>  cook rhubarb</strong></span></div> 
             <div class="img">   <img src="gallery/4.jpg" alt="cooking image"> <span> how to<br>
              <strong>  rehrat chicken </strong></span></div> 
-         <div class="img">   <img src="gallery/1.jpg" alt="cooking image"> <span> how to<br>
-             <strong>  pan broil meat </strong></span> </div>  
-         <div class="img">   <img src="gallery/1.jpg" alt="cooking image"> <span> how to<br>
-             <strong>  pan broil meat </strong></span></div> 
-         <div class="img">   <img src="gallery/1.jpg" alt="cooking image"> <span> how to<br>
-             <strong>  pan broil meat </strong></span></div> 
-         <div class="img">   <img src="gallery/1.jpg" alt="cooking image"> <span> how to<br>
-             <strong>  pan broil meat </strong></span> </div> 
-         <div class="img">   <img src="gallery/1.jpg" alt="cooking image"> <span> how to<br>
-             <strong>  pan broil meat </strong></span> </div> 
+         <div class="img">   <img src="gallery/18.jpg" alt="cooking image"> <span> how to<br>
+             <strong>  tell if eggs are raw or hard boiled </strong></span> </div>  
+         <div class="img">   <img src="gallery/21.jpg" alt="cooking image"> <span> how to<br>
+             <strong>  cook steak in aoven </strong></span></div> 
+         <div class="img">   <img src="gallery/22.jpEg" alt="cooking image"> <span> how to<br>
+             <strong>  thicken cUrry </strong></span></div> 
+         <div class="img">   <img src="gallery/23.jpg" alt="cooking image"> <span> how to<br>
+             <strong>  bake chicken breast </strong></span> </div> 
+         <div class="img">   <img src="gallery/24.jpg" alt="cooking image"> <span> how to<br>
+             <strong>  cook steak in fraying pan </strong></span> </div> 
            </div>  
            </div>
        </div>
@@ -353,13 +420,6 @@
 
              <!-- side-bar -->
         <div class="side-bar"> 
-            <div class="one"> 
-                <span><i class="fa fa-times fa-lg" aria-hidden="true"></i>   </span> 
-                <p> 
-                 Voudriez-vous apprendre 
-                 Comment apprendre à cuisiner en autodidacte? Découvrez comment le faire en le lisant en français!
-                </p>
-            </div> 
             <div class="two"> 
                 <div class="top"> 
                     <span>co-authored by :</span>
@@ -419,7 +479,7 @@
 
  <div class="center">    
       <div class="start">     
-    <a href="" name="bottom"  >home</a>
+    <a href="" >home</a>
     <a href="" >about wikihow</a>
     <a href="" >jobs</a> 
 </div>
@@ -429,15 +489,14 @@
     <a href=""> mobile view</a> 
 </div>
 </div> 
-<div class="right"> 
+<div class="social-icon"> 
     <h1> follow us </h1> 
     <div class="icon"> 
     <div><i class="fa fa-instagram fa-lg " aria-hidden="true"></i> </div> 
     <div><i class="fa fa-facebook fa-lg" aria-hidden="true"></i> </div> 
     <div> <i class="fa fa-twitter fa-lg" aria-hidden="true"></i></div> 
     <div> <i class="fa fa-youtube-play fa-lg " aria-hidden="true"></i>  </div> 
-    <div> <i class="fa fa-envelope fa-lg" aria-hidden="true"></i>
-    </div>
+    <div> <i class="fa fa-envelope fa-lg" aria-hidden="true"></i> </div>
   </div> 
   </div>
  </div>
