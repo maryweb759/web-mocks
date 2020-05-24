@@ -1,0 +1,347 @@
+body  { 
+    margin:0; 
+    padding:0; 
+    font-family: Arial, Helvetica, sans-serif; 
+     min-height:100vh ; 
+    display:flex; 
+    background-color: #f7f7f7;
+    flex-direction:column;
+   
+} 
+  /***** start header ****/ 
+.header .header-elem{ 
+    border-bottom: 1px solid #e2e2e2; 
+    background-color: #fff;
+    padding: 10px 15px; 
+    color:black; 
+   font-size: 20px; 
+   display: flex; 
+   justify-content: space-between; 
+   align-items: center;
+}  
+.header span  { cursor:pointer;  align-items: center; }
+  .navbar-menu span {  color:#0d0d0d;}
+ .header  .login-section span {
+    font-size: 13px; 
+   }
+.header .nytime-logo , .navbar-menu .nytime-logo {
+  font-family: 'Berkshire Swash', cursive; 
+  font-size: 23px; font-weight: bold;} 
+  
+.header .login-section { 
+  display:flex;  
+  justify-content: space-between;
+  background-color:#f7f7f7; 
+  padding:10px 15px ; 
+  margin:0;
+  align-items: center; 
+  border-bottom: 1px solid #e2e2e2; 
+} 
+.login-section .login .bar {
+   display:inline-block; 
+   height:15px; 
+   background-color:#cccccc;
+   width:1px; 
+   margin : 0 3px}
+.login-section  .login {
+   color:#326891; text-transform: capitalize;
+  
+  } 
+/**************  fullscreen menu**************/
+.menu-container { 
+    position:fixed; 
+    background-color: #fff;
+    position:absolute; 
+    z-index:100;
+    top:0; 
+    left:0; 
+    right:0;
+    padding:px;
+    height: 100%; 
+    transform: scale(0); 
+    font-family: Arial, Helvetica, sans-serif; 
+    overflow-y: scroll;
+} 
+.navbar-menu { 
+  z-index:100;
+  align-items: center;
+   border-bottom: 1px solid #e2e2e2; 
+   margin: 0  ; 
+   padding:0 15px;
+   color:black; 
+   font-size: 16px; 
+   display: flex; 
+   justify-content: space-between;
+} 
+.navbar-menu span:last-of-type {
+   font-size:36px; padding: 3px 0; cursor:pointer;}
+.container { 
+   display: flex; 
+   justify-content: center; 
+  margin-left:10px;
+  } 
+  
+  /********* start menu container********/ 
+
+  .toggle-menu-container { 
+    margin-left: 0 1rem ;
+    width:100%; 
+    color:#ffffff;
+    max-width:700px;
+    min-width: 140px;
+    margin: 8px auto;
+
+  } 
+  .menu-content { 
+    text-transform: capitalize; 
+    color:#333;
+    display: flex; 
+    justify-content: space-between;
+    margin-right:10px;
+    padding-right:10px;
+    
+  } 
+.search-form input , .search-form button {  
+   color:#adadad;
+    margin : 20px 0 0 0  ;
+    text-transform: uppercase; 
+    width:75%; 
+    padding: 8px; 
+    outline:0;
+    border-radius: 4px; 
+    font-size:12px;
+    border:1px solid rgb(223, 210, 210)
+} 
+.search-form button{ 
+    color:white; 
+    background-color: #aabdca; 
+    border:0; 
+    padding: 10px;
+    width: 35px;
+  }
+  .container p { 
+    color:#000; 
+    font-size:18px; 
+    padding: 30px 0 17px 0 ; 
+    text-transform: capitalize; 
+  }   
+.menu-content ul { 
+    cursor:pointer;
+    padding-left: 0; 
+    width:50%; 
+    font-size: 12px; 
+    line-height:28px
+  
+      }
+.menu-content ul li{ 
+         list-style: none; 
+         font-size: 13px; 
+      }   
+
+      /**** start  mani  section      *****/ 
+.main-section { 
+  background-color: #fff;
+  color:#222;
+  max-width:760px;
+  width:100%; 
+  min-width:150px;
+  min-height:900px; 
+  padding:18px 0 0 0 ;
+  margin:0px auto 5px auto; 
+} 
+.main-section h1  { 
+  transition:opacity .4s;
+  margin:0; 
+  padding:0 15px 0 25px;  
+  cursor:pointer;
+}
+.main-section h1:hover { opacity:.8}  
+.main-section strong { 
+  color:red;  
+  padding: 15px 10px ; 
+  display:inline-block; 
+  font-size:13px; 
+  text-transform: uppercase;} 
+  .main-section strong  span { 
+  font-size:11px; 
+  text-transform: lowercase; 
+  padding-left:8px;
+} 
+.main-section .list-items { padding-left: 20px;} 
+.main-section h2 { font-size: 17px;
+  margin:0; 
+  padding:0 10px 0 5px ;
+  text-transform: capitalize; 
+}
+.main-section ul { 
+  margin:0; 
+  padding:20px 20px 20px 0px;  
+  cursor:pointer; 
+  list-style: outside;} 
+.main-section ul li{  padding:5px 5px 5px 0px; }  
+.main-section hr { 
+  margin: 12px 25px; 
+  border:1px solid #b3b3b3; }
+.main-section p {
+  padding:5px 25px 5px 30px; 
+  color:#55556d;  
+  cursor:pointer; }
+.main-section ul  {  padding-left:25px; } 
+.main-section ul .list:hover { 
+  text-decoration: underline rgb(185, 194, 187);  } 
+
+.main-section .slider-img  { 
+  margin:5px 15px;
+  
+  max-height: 350px; 
+  padding :0  10px; 
+  
+}
+.main-section .slider-img img { 
+  cursor:pointer;
+  max-height:350px;
+  width:100%;
+  display:block; 
+} 
+
+/*****        start second main-section   *****/ 
+.main-section .peoples-section-pic {  
+  display:flex; 
+  padding-right:20px; 
+  justify-content: space-between;} 
+  .main-section .bold-hr { margin: 12px 25px; 
+    border:1px solid #121212;}
+.main-section .peoples-section-pic .profile-pic {max-width:70px ;width:100%; height:60px; min-width:55px;
+  
+  border-radius: 50%;
+}  
+.main-section .peoples-section-pic .profile-pic img { 
+  width:100%; height:100%;  border-radius: 50%;
+} 
+.main-section .peoples-section-pic h2 , .peoples-section h2 { 
+  color:#a19d9d; 
+  text-transform: capitalize;  
+  padding: 10px 0px 10px 23px;;
+  font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/****        accordio and footer container                       *******/ 
+
+.acc-foot-container { 
+  margin-top:auto; 
+  margin-left: auto; 
+  margin-right: auto; 
+  width:100%;
+  max-width:760px; 
+  border-top: 1px solid #ebebeb ; 
+  background-color:  #fff; 
+  border-bottom: 1px solid #ebebeb; 
+   padding:5px 0px 8px 0px; 
+   border-bottom: 1px solid #ebebeb ; 
+  }  
+
+/**********      start accordion         **********/
+.accordio-content:last-of-type { 
+  margin:0; 
+  padding-bottom:8px; 
+   border-bottom: 2px solid #ebebeb ; 
+  }
+.acc-foot-container h3 { 
+  padding:3px 20px; 
+  margin:0;  
+  color:#000; 
+ cursor:pointer; 
+ font-family: 'Berkshire Swash', cursive;
+ font-size: 23px; 
+ background-color:  #ffffff;
+} 
+ .acc-foot-container hr {  
+   border:1px solid #ebebeb; 
+ margin: 8px 20px; 
+}
+
+ .accordio-content button { 
+   color:333;  
+   padding:6px  20px;
+   margin:0;  
+   display:block; 
+   background-color:  #ffffff;
+   border:0; font-size: 15px; 
+   text-transform: uppercase; 
+   width:100%; 
+   outline: none;
+   text-align:left; 
+   cursor:pointer;
+  } 
+
+.accordio-content button:focus { color:#b3b3be;}
+ .accordion-body {
+   padding:0px 0px; 
+   margin:0; 
+   clear: both; 
+   overflow:hidden; 
+   color:#333; display:none
+ } 
+ 
+ .accordion-body ul { float:left; width:45%; padding:0px 10px ;  }
+ .accordion-body ul li {  padding: 6px 0px;
+   list-style: none; 
+ cursor:pointer;}
+       /**********   end accordion     **********/ 
+
+footer .copy-write { 
+  text-align:center;  
+  font-size: 12px;
+ color:#666666;  
+ padding:8px;
+}
+footer .footer-elem {   
+  padding:8px 20px; 
+  text-align: center;  
+}
+footer .footer-elem a { 
+  display:inline-block;
+  text-decoration: none;   
+  color:#666666; 
+  padding:5px; 
+  font-size: 12px; 
+  font-family: Arial, Helvetica, sans-serif; 
+}
+  footer .footer-elem a:hover { text-decoration: underline;}
+
+@media(max-width:500px) { 
+  .main-section h1 { font-size:20px;} 
+  .header .nytime-logo , .navbar-menu .nytime-logo { 
+    font-size:16px
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
