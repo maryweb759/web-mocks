@@ -1,0 +1,603 @@
+<!DOCTYPE html><html lang="en-US"
+ prefix="og: http://ogp.me/ns#" ><head><meta name="msvalidate.01" content="ED6511722D66805E697F4B337E96D89A" /><meta charset="UTF-8" ><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"d5f0c153db",applicationID:"260065271"};window.NREUM||(NREUM={}),__nr_require=function(e,n,t){function r(t){if(!n[t]){var o=n[t]={exports:{}};e[t][0].call(o.exports,function(n){var o=e[t][1][n];return r(o||n)},o,o.exports)}return n[t].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<t.length;o++)r(t[o]);return r}({1:[function(e,n,t){function r(){}function o(e,n,t){return function(){return i(e,[c.now()].concat(u(arguments)),n?null:this,t),n?void 0:this}}var i=e("handle"),a=e(3),u=e(4),f=e("ee").get("tracer"),c=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,n){s[n]=o(d+n,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),n.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,n){var t={},r=this,o="function"==typeof n;return i(l+"tracer",[c.now(),e,t],r),function(){if(f.emit((o?"":"no-")+"fn-start",[c.now(),r,o],t),o)try{return n.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],t),e}finally{f.emit("fn-end",[c.now()],t)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,n){m[n]=o(l+n)}),newrelic.noticeError=function(e,n){"string"==typeof e&&(e=new Error(e)),i("err",[e,c.now(),!1,n])}},{}],2:[function(e,n,t){function r(e,n){if(!o)return!1;if(e!==o)return!1;if(!n)return!0;if(!i)return!1;for(var t=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==t[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var u=navigator.userAgent,f=u.match(a);f&&u.indexOf("Chrome")===-1&&u.indexOf("Chromium")===-1&&(o="Safari",i=f[1])}n.exports={agent:o,version:i,match:r}},{}],3:[function(e,n,t){function r(e,n){var t=[],r="",i=0;for(r in e)o.call(e,r)&&(t[i]=n(r,e[r]),i+=1);return t}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],4:[function(e,n,t){function r(e,n,t){n||(n=0),"undefined"==typeof t&&(t=e?e.length:0);for(var r=-1,o=t-n||0,i=Array(o<0?0:o);++r<o;)i[r]=e[n+r];return i}n.exports=r},{}],5:[function(e,n,t){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,n,t){function r(){}function o(e){function n(e){return e&&e instanceof r?e:e?f(e,u,i):i()}function t(t,r,o,i){if(!d.aborted||i){e&&e(t,r,o);for(var a=n(o),u=v(t),f=u.length,c=0;c<f;c++)u[c].apply(a,r);var p=s[y[t]];return p&&p.push([b,t,r,a]),a}}function l(e,n){h[e]=v(e).concat(n)}function m(e,n){var t=h[e];if(t)for(var r=0;r<t.length;r++)t[r]===n&&t.splice(r,1)}function v(e){return h[e]||[]}function g(e){return p[e]=p[e]||o(t)}function w(e,n){c(e,function(e,t){n=n||"feature",y[t]=n,n in s||(s[n]=[])})}var h={},y={},b={on:l,addEventListener:l,removeEventListener:m,emit:t,get:g,listeners:v,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",f=e("gos"),c=e(3),s={},p={},d=n.exports=o();d.backlog=s},{}],gos:[function(e,n,t){function r(e,n,t){if(o.call(e,n))return e[n];var r=t();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(e,n,t){function r(e,n,t,r){o.buffer([e],r),o.emit(e,n,t)}var o=e("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(e,n,t){function r(e){var n=typeof e;return!e||"object"!==n&&"function"!==n?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");n.exports=r},{}],loader:[function(e,n,t){function r(){if(!E++){var e=x.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&n))return s.abort();c(y,function(n,t){e[n]||(e[n]=t)}),f("mark",["onload",a()+x.offset],null,"api");var t=l.createElement("script");t.src="https://"+e.agent,n.parentNode.insertBefore(t,n)}}function o(){"complete"===l.readyState&&i()}function i(){f("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-x.offset}var u=(new Date).getTime(),f=e("handle"),c=e(3),s=e("ee"),p=e(2),d=window,l=d.document,m="addEventListener",v="attachEvent",g=d.XMLHttpRequest,w=g&&g.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:g,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var h=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1130.min.js"},b=g&&w&&w[m]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:u,now:a,origin:h,features:{},xhrWrappable:b,userAgent:p};e(1),l[m]?(l[m]("DOMContentLoaded",i,!1),d[m]("load",r,!1)):(l[v]("onreadystatechange",o),d[v]("onload",r)),f("mark",["firstbyte",u],null,"api");var E=0,O=e(5)},{}]},{},["loader"]);</script><meta name="viewport" id="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" /><link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="https://www.pymnts.com/feed/" /><link rel="alternate" type="text/xml" title="RSS .92" href="https://www.pymnts.com/feed/rss/" /><link rel="alternate" type="application/atom+xml" title="Atom 0.3" href="https://www.pymnts.com/feed/atom/" /><link rel="pingback" href="https://www.pymnts.com/xmlrpc.php" /><meta property="fb:pages" content="108999179156618" /><link rel="manifest" href="/superpwa-manifest.json"><meta name="theme-color" content="#1c4d0f"><link rel="apple-touch-icon" sizes="192x192" href="https://securecdn.pymnts.com/wp-content/uploads/2019/03/192.jpg"><link rel="apple-touch-icon" sizes="512x512" href="https://securecdn.pymnts.com/wp-content/uploads/2019/03/512.jpg"><title>The Challenges of Finding and Protecting Value  | PYMNTS.com</title><link rel="author" href="https://plus.google.com/110531374147931573914/posts" /><meta name="description"  content="It&#039;s no easy thing to bring new value to the marketplace – or to keep control of it. Finders are not always keepers when it comes to payments and commerce value." /><link rel="canonical" href="https://www.pymnts.com/today-in-data/2018/payments-commerce-value-retail/" /><meta property="og:title" content="The Challenges of Finding and Protecting Value  | PYMNTS.com" /><meta property="og:type" content="article" /><meta property="og:url" content="https://www.pymnts.com/today-in-data/2018/payments-commerce-value-retail/" /><meta property="og:image" content="https://securecdn.pymnts.com/wp-content/uploads/2018/12/payments-commerce-value-retail-data-457x288.jpg" /><meta property="og:site_name" content="PYMNTS.com" /><meta property="og:description" content="It&#039;s no easy thing to bring new value to the marketplace – or to keep control of it. Finders are not always keepers when it comes to payments and commerce value." /><meta property="article:published_time" content="2018-12-17T16:00:30Z" /><meta property="article:modified_time" content="2018-12-14T23:01:08Z" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:site" content="@pymnts" /><meta name="twitter:creator" content="@pymnts" /><meta name="twitter:domain" content="https://www.pymnts.com/" /><meta name="twitter:title" content="The Challenges of Finding and Protecting Value  | PYMNTS.com" /><meta name="twitter:description" content="It&#039;s no easy thing to bring new value to the marketplace – or to keep control of it. Finders are not always keepers when it comes to payments and commerce value." /><meta name="twitter:image" content="https://securecdn.pymnts.com/wp-content/uploads/2018/12/payments-commerce-value-retail-data-457x288.jpg" /><meta itemprop="image" content="https://securecdn.pymnts.com/wp-content/uploads/2018/12/payments-commerce-value-retail-data-457x288.jpg" /><link rel="amphtml" href="https://www.pymnts.com/today-in-data/2018/payments-commerce-value-retail/amp/" /><meta name="generator" content="AMP for WP 0.9.98.14"/><link rel='dns-prefetch' href='//platform-api.sharethis.com' /><link rel='dns-prefetch' href='//maxcdn.bootstrapcdn.com' /><link rel='dns-prefetch' href='//fonts.googleapis.com' /><link rel="alternate" type="application/rss+xml" title="PYMNTS.com &raquo; Feed" href="https://www.pymnts.com/feed/" /><link rel="alternate" type="application/rss+xml" title="PYMNTS.com &raquo; Comments Feed" href="https://www.pymnts.com/comments/feed/" /> <!--noptimize--><script>
+					advanced_ads_ready=function(){var fns=[],listener,doc=typeof document==="object"&&document,hack=doc&&doc.documentElement.doScroll,domContentLoaded="DOMContentLoaded",loaded=doc&&(hack?/^loaded|^c/:/^loaded|^i|^c/).test(doc.readyState);if(!loaded&&doc){listener=function(){doc.removeEventListener(domContentLoaded,listener);window.removeEventListener("load",listener);loaded=1;while(listener=fns.shift())listener()};doc.addEventListener(domContentLoaded,listener);window.addEventListener("load",listener)}return function(fn){loaded?setTimeout(fn,0):fns.push(fn)}}();
+			</script><!--/noptimize--><link rel='stylesheet' id='theme-styles-css'  href='https://securecdn.pymnts.com/wp-content/themes/flex-mag-sixspoke/style.css' type='text/css' media='all' /><link rel='stylesheet' id='wphb-1-css'  href='https://securecdn.pymnts.com/wp-content/uploads/hummingbird-assets/b8a9a1b1944aa4d057705680bab6ee7f.css' type='text/css' media='all' /><link rel='stylesheet' id='dashicons-css'  href='https://securecdn.pymnts.com/wp-includes/css/dashicons.min.css' type='text/css' media='all' /><link rel='stylesheet' id='mvp-reset-css'  href='https://securecdn.pymnts.com/wp-content/themes/flex-mag/css/reset.css' type='text/css' media='all' /><link rel='stylesheet' id='mvp-fontawesome-css'  href='//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' type='text/css' media='all' /><link rel='stylesheet' id='mvp-style-css'  href='https://securecdn.pymnts.com/wp-content/themes/flex-mag-sixspoke/style.css' type='text/css' media='all' /> <!--[if lt IE 10]><link rel='stylesheet' id='mvp-iecss-css'  href='https://securecdn.pymnts.com/wp-content/themes/flex-mag-sixspoke/css/iecss.css' type='text/css' media='all' /> <![endif]--><link rel='stylesheet' id='mvp-media-queries-css'  href='https://securecdn.pymnts.com/wp-content/uploads/hummingbird-assets/530f50bae59b1dfc9df87cc8dbf6b3de.css' type='text/css' media='all' /> <!--[if lt IE 9]><link rel='stylesheet' id='vc_lte_ie9-css'  href='https://securecdn.pymnts.com/wp-content/plugins/js_composer/assets/css/vc_lte_ie9.min.css' type='text/css' media='screen' /> <![endif]--><link rel='stylesheet' id='__EPYT__style-css'  href='https://securecdn.pymnts.com/wp-content/plugins/youtube-embed-plus/styles/ytprefs.min.css' type='text/css' media='all' /><style id='__EPYT__style-inline-css' type='text/css'>.epyt-gallery-thumb {
+                        width: 33.333%;
+                }
+                
+                         @media (min-width:0px) and (max-width: 767px) {
+                            .epyt-gallery-rowbreak {
+                                display: none;
+                            }
+                            .epyt-gallery-allthumbs[class*="epyt-cols"] .epyt-gallery-thumb {
+                                width: 100% !important;
+                            }
+                          }</style> <script type='text/javascript' src='https://securecdn.pymnts.com/wp-content/uploads/hummingbird-assets/83d08b62b42a1004c3a77cae2e7a0436.js'></script> <script type='text/javascript' src='https://securecdn.pymnts.com/wp-content/themes/flex-mag-sixspoke/js/mag-scripts.js?v=3&#038;ver=1.2.0'></script> <link rel='https://api.w.org/' href='https://www.pymnts.com/wp-json/' /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.pymnts.com/xmlrpc.php?rsd" /><link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://securecdn.pymnts.com/wp-includes/wlwmanifest.xml" /><link rel='prev' title='Core Retail Sales Grew 0.9 Percent In November' href='https://www.pymnts.com/news/retail/2018/sales-economists-inflation-consumer-spending/' /><link rel='next' title='Resellers Find Treasure Trove In Returned Goods' href='https://www.pymnts.com/news/retail/2018/returned-merchandise-resellers-bstock-ecommerce/' /><link rel='shortlink' href='https://www.pymnts.com/?p=572020' /><link rel="alternate" type="application/json+oembed" href="https://www.pymnts.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.pymnts.com%2Ftoday-in-data%2F2018%2Fpayments-commerce-value-retail%2F" /><link rel="alternate" type="text/xml+oembed" href="https://www.pymnts.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.pymnts.com%2Ftoday-in-data%2F2018%2Fpayments-commerce-value-retail%2F&#038;format=xml" /><link rel="alternate" type="application/json" title="PYMNTS.com &raquo; JSON Feed" href="https://www.pymnts.com/feed/json/" /> <script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"LocalBusiness","name":"PYMNTS.com","url":"https:\/\/www.pymnts.com","openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":[""],"opens":"","closes":""}]}</script><script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Person"}</script><script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"VideoObject","name":"Today In Data:\u00a0The Challenges Of Finding And Protecting Value","description":"In recent years, the payments and commerce ecosystem has been about the finding new value \u2013 and then finding ways to protect it. It\u2019s why Amazon\u00a0is taking back Whole Foods delivery from Instacart, the multiple billion-dollar brand built for bringing groceries to consumers\u2019 front doors. It\u2019s why the race to fight back the fraudsters, and level up compliance, is always ongoing as cybercriminals keep slipping off with ill-gotten gains. Value creation is always happening \u2013 but when it comes to benefits from the value created, that race remains ongoing.\r\n\r\n\r\n\r\nData:\r\n\r\n$100 billion: The estimated worth of digital supermarket sales by 2025.\r\n\r\n$7.6 billion: Instacart\u2019s valuation as of its last funding round.\r\n\r\n\u00a3100 million: The amount lost to fraud in the U.K. in the first six months of 2018 alone.\r\n\r\n75 percent: Share of money laundering accounts in the U.K. that are tied to short \u201cdistances\u201d between the capturing, moving and, ultimately, the using of funds.\r\n\r\n50 percent: Share\u00a0of firms and CCOs that are using technology in compliance efforts.","publisher":{"@type":"Organization","name":"PYMNTS.com","logo":{"@type":"ImageObject","url":"https:\/\/www.pymnts.com\/wp-content\/uploads\/2019\/06\/112-1-60x60.jpg","width":60,"height":60}},"thumbnailUrl":"https:\/\/www.pymnts.com\/wp-content\/uploads\/2018\/12\/payments-commerce-value-retail-data.jpg","uploadDate":"2018-12-17T11:00:30"}</script><script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"NewsArticle","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/www.pymnts.com\/today-in-data\/2018\/payments-commerce-value-retail\/"},"headline":"Today In Data:\u00a0The Challenges Of Finding And Protecting Value","image":{"@type":"ImageObject","url":"https:\/\/www.pymnts.com\/wp-content\/uploads\/2018\/12\/payments-commerce-value-retail-data.jpg","width":1000,"height":631},"datePublished":"2018-12-17T11:00:30","dateModified":"2018-12-14T18:01:08","author":{"@type":"Person","name":"PYMNTS"},"publisher":{"@type":"Organization","name":"PYMNTS.com","logo":{"@type":"ImageObject","url":"https:\/\/www.pymnts.com\/wp-content\/uploads\/2019\/06\/112-60x60.jpg","width":60,"height":60}}}</script><script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"NewsMediaOrganization","name":"PYMNTS.com","url":"https:\/\/www.pymnts.com","ContactPoint":{"@type":"ContactPoint","contactType":"customer support","url":"https:\/\/www.pymnts.com\/contact-us\/","email":"information@PYMNTS.com","areaServed":"Boston, MA","contactOption":["",""],"availableLanguage":"English"},"logo":{"@type":"ImageObject","url":"https:\/\/www.pymnts.com\/wp-content\/uploads\/2019\/06\/112.jpg","width":112,"height":112},"sameAs":["https:\/\/www.facebook.com\/pymnts\/","https:\/\/twitter.com\/pymnts\/","https:\/\/www.instagram.com\/pymnts\/","https:\/\/youtube.com\/pymntsmedia\/","https:\/\/www.linkedin.com\/company\/pymnts-com\/"]}</script><script type="application/ld+json">{"@context":"https:\/\/schema.org","@graph":[{"@context":"https:\/\/schema.org","@type":"SiteNavigationElement","id":"site-navigation","name":"Today's News","url":"https:\/\/www.pymnts.com\/today-on-pymnts\/"},{"@context":"https:\/\/schema.org","@type":"SiteNavigationElement","id":"site-navigation","name":"Retail","url":"https:\/\/www.pymnts.com\/retail\/"},{"@context":"https:\/\/schema.org","@type":"SiteNavigationElement","id":"site-navigation","name":"B2B","url":"https:\/\/www.pymnts.com\/b2b\/"},{"@context":"https:\/\/schema.org","@type":"SiteNavigationElement","id":"site-navigation","name":"OPINION","url":"https:\/\/www.pymnts.com\/author\/karen-webster\/"},{"@context":"https:\/\/schema.org","@type":"SiteNavigationElement","id":"site-navigation","name":"STUDIES","url":"https:\/\/www.pymnts.com\/study\/"},{"@context":"https:\/\/schema.org","@type":"SiteNavigationElement","id":"site-navigation","name":"TRACKERS\u00ae","url":"https:\/\/www.pymnts.com\/tracker\/"},{"@context":"https:\/\/schema.org","@type":"SiteNavigationElement","id":"site-navigation","name":"Podcasts","url":"https:\/\/www.pymnts.com\/podcasts\/"},{"@context":"https:\/\/schema.org","@type":"SiteNavigationElement","id":"site-navigation","name":"MASTERCLASS","url":"https:\/\/www.pymnts.com\/masterclass"},{"@context":"https:\/\/schema.org","@type":"SiteNavigationElement","id":"site-navigation","name":"Topics","url":"#topics"}]}</script><script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"WebSite","name":"PYMNTS.com","url":"https:\/\/www.pymnts.com","potentialAction":[{"@type":"SearchAction","target":"https:\/\/www.pymnts.com\/?s={search_term_string}","query-input":"required name=search_term_string"}]}</script><script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https:\/\/www.pymnts.com\/","name":"Home"}},{"@type":"ListItem","position":2,"item":{"@id":"https:\/\/www.pymnts.com\/category\/today-in-data\/","name":"Today In Data"}},{"@type":"ListItem","position":3,"item":{"@id":"https:\/\/www.pymnts.com\/today-in-data\/2018\/payments-commerce-value-retail\/","name":"Today In Data:\u00a0The Challenges Of Finding And Protecting Value"}}]}</script><script type="text/javascript">;var advadsCfpQueue = [], advadsCfpExpHours = 3;
+		var advadsCfpClickLimit = 3;
+		;
+		var advadsCfpPath = '';
+		var advadsCfpDomain = 'www.pymnts.com';
+		var advadsCfpAd = function( adID ){
+			if ( 'undefined' == typeof advadsProCfp ) { advadsCfpQueue.push( adID ) } else { advadsProCfp.addElement( adID ) }
+		};</script> <style type='text/css'>@import url(//fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700,800,900|Roboto:100,200,300,400,500,600,700,800,900|Roboto:100,200,300,400,400italic,500,600,700,700italic,800,900|Roboto:100,200,300,400,400italic,500,600,700,700italic,800,900|Roboto:100,200,300,400,500,600,700,800,900&subset=latin,latin-ext,cyrillic,cyrillic-ext,greek-ext,greek,vietnamese);
+
+#wallpaper {
+	background: url() no-repeat 50% 0;
+	}
+body,
+.blog-widget-text p,
+.feat-widget-text p,
+.post-info-right,
+span.post-excerpt,
+span.feat-caption,
+span.soc-count-text,
+#content-main p,
+#commentspopup .comments-pop,
+.archive-list-text p,
+.author-box-bot p,
+#post-404 p,
+.foot-widget,
+#home-feat-text p,
+.feat-top2-left-text p,
+.feat-wide1-text p,
+.feat-wide4-text p,
+#content-main table,
+.foot-copy p,
+.video-main-text p {
+	font-family: 'Roboto', sans-serif;
+	}
+
+a,
+a:visited,
+.post-info-name a {
+	color: #1C4D0F;
+	}
+
+a:hover {
+	color: #999999;
+	}
+
+.fly-but-wrap,
+span.feat-cat,
+span.post-head-cat,
+.prev-next-text a,
+.prev-next-text a:visited,
+.prev-next-text a:hover {
+	background: #1C4D0F;
+	}
+
+.fly-but-wrap {
+	background: #1C4D0F;
+	}
+
+.fly-but-wrap span {
+	background: #ffffff;
+	}
+
+.woocommerce .star-rating span:before {
+	color: #1C4D0F;
+	}
+
+.woocommerce .widget_price_filter .ui-slider .ui-slider-range,
+.woocommerce .widget_price_filter .ui-slider .ui-slider-handle {
+	background-color: #1C4D0F;
+	}
+
+.woocommerce span.onsale,
+.woocommerce #respond input#submit.alt,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt,
+.woocommerce #respond input#submit.alt:hover,
+.woocommerce a.button.alt:hover,
+.woocommerce button.button.alt:hover,
+.woocommerce input.button.alt:hover {
+	background-color: #1C4D0F;
+	}
+
+span.post-header {
+	border-top: 4px solid #1C4D0F;
+	}
+
+#main-nav-wrap,
+nav.main-menu-wrap,
+.nav-logo,
+.nav-right-wrap,
+.nav-menu-out,
+.nav-logo-out,
+#head-main-top {
+	-webkit-backface-visibility: hidden;
+	background: #1C4D0F;
+	}
+
+nav.main-menu-wrap ul li a,
+.nav-menu-out:hover ul li:hover a,
+.nav-menu-out:hover span.nav-search-but:hover i,
+.nav-menu-out:hover span.nav-soc-but:hover i,
+span.nav-search-but i,
+span.nav-soc-but i {
+	color: #ffffff;
+	}
+
+.nav-menu-out:hover li.menu-item-has-children:hover a:after,
+nav.main-menu-wrap ul li.menu-item-has-children a:after {
+	border-color: #ffffff transparent transparent transparent;
+	}
+
+.nav-menu-out:hover ul li a,
+.nav-menu-out:hover span.nav-search-but i,
+.nav-menu-out:hover span.nav-soc-but i {
+	color: #d1d2d4;
+	}
+
+.nav-menu-out:hover li.menu-item-has-children a:after {
+	border-color: #d1d2d4 transparent transparent transparent;
+	}
+
+.nav-menu-out:hover ul li ul.mega-list li a,
+.side-list-text p,
+.row-widget-text p,
+.blog-widget-text h2,
+.feat-widget-text h2,
+.archive-list-text h2,
+h2.author-list-head a,
+.mvp-related-text a {
+	color: #000000;
+	}
+
+ul.mega-list li:hover a,
+ul.side-list li:hover .side-list-text p,
+ul.row-widget-list li:hover .row-widget-text p,
+ul.blog-widget-list li:hover .blog-widget-text h2,
+.feat-widget-wrap:hover .feat-widget-text h2,
+ul.archive-list li:hover .archive-list-text h2,
+ul.archive-col-list li:hover .archive-list-text h2,
+h2.author-list-head a:hover,
+.mvp-related-posts ul li:hover .mvp-related-text a {
+	color: #999999 !important;
+	}
+
+span.more-posts-text,
+a.inf-more-but,
+#comments-button a,
+#comments-button span.comment-but-text {
+	border: 1px solid #1C4D0F;
+	}
+
+span.more-posts-text,
+a.inf-more-but,
+#comments-button a,
+#comments-button span.comment-but-text {
+	color: #1C4D0F !important;
+	}
+
+#comments-button a:hover,
+#comments-button span.comment-but-text:hover,
+a.inf-more-but:hover,
+span.more-posts-text:hover {
+	background: #1C4D0F;
+	}
+
+nav.main-menu-wrap ul li a,
+ul.col-tabs li a,
+nav.fly-nav-menu ul li a,
+.foot-menu .menu li a {
+	font-family: 'Roboto', sans-serif;
+	}
+
+.feat-top2-right-text h2,
+.side-list-text p,
+.side-full-text p,
+.row-widget-text p,
+.feat-widget-text h2,
+.blog-widget-text h2,
+.prev-next-text a,
+.prev-next-text a:visited,
+.prev-next-text a:hover,
+span.post-header,
+.archive-list-text h2,
+#woo-content h1.page-title,
+.woocommerce div.product .product_title,
+.woocommerce ul.products li.product h3,
+.video-main-text h2,
+.mvp-related-text a {
+	font-family: 'Roboto', sans-serif;
+	}
+
+.feat-wide-sub-text h2,
+#home-feat-text h2,
+.feat-top2-left-text h2,
+.feat-wide1-text h2,
+.feat-wide4-text h2,
+.feat-wide5-text h2,
+h1.post-title,
+#content-main h1.post-title,
+#post-404 h1,
+h1.post-title-wide,
+#content-main blockquote p,
+#commentspopup #content-main h1 {
+	font-family: 'Roboto', sans-serif;
+	}
+
+h3.home-feat-title,
+h3.side-list-title,
+#infscr-loading,
+.score-nav-menu select,
+h1.cat-head,
+h1.arch-head,
+h2.author-list-head,
+h3.foot-head,
+.woocommerce ul.product_list_widget span.product-title,
+.woocommerce ul.product_list_widget li a,
+.woocommerce #reviews #comments ol.commentlist li .comment-text p.meta,
+.woocommerce .related h2,
+.woocommerce div.product .woocommerce-tabs .panel h2,
+.woocommerce div.product .product_title,
+#content-main h1,
+#content-main h2,
+#content-main h3,
+#content-main h4,
+#content-main h5,
+#content-main h6 {
+	font-family: 'Roboto', sans-serif;
+	}</style><style type="text/css">.post-cont-out,
+.post-cont-in {
+	margin-right: 0;
+	}
+.nav-links {
+	display: none;
+	}
+
+
+
+
+
+
+
+.nav-left-wrap {
+	width: 60px;
+	}
+.nav-logo-out {
+	margin-left: -60px;
+	}
+.nav-logo-in {
+	margin-left: 60px;
+	}
+.nav-logo-show {
+	padding-right: 20px;
+	width: 200px;
+	height: 50px;
+	}
+.nav-logo-show img {
+	width: auto;
+	}
+.nav-left-width {
+	width: 280px !important;
+	}
+.nav-logo-out-fade {
+	margin-left: -280px;
+	}
+.nav-logo-in-fade {
+	margin-left: 280px;
+	}
+
+.share-count,
+.feat-info-views {
+display: none;
+}</style><meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress."/><style type="text/css" id="custom-background-css">body.custom-background { background-color: #f9f9f9; }</style> <script type="text/javascript">if ( 'undefined' == typeof advadsGATracking ) window.advadsGATracking = {};</script>  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-11167465-1"></script> <script>window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-11167465-1');
+
+    let newBox = function(){
+    this.box = {
+      box: '',
+      boxContent: 'New!',
+      boxPositionCSS: '',
+      setContent: function( content ) {
+        this.boxContent = content;
+      },
+      calcBoxPosition: function( targetId ){
+        let oTop = ''
+        let oLeft = ''
+        let css = ''
+        let position = ''
+
+        console.log( document.getElementById( targetId ) )
+
+        if ( document.getElementById( targetId ) != null ){
+          let target = document.getElementById( targetId )
+          oTop = target.offsetTop
+          oLeft = target.offsetLeft
+        }
+
+        if ( oTop > 0 ) {
+          css = css+'top:'+oTop+'px;';
+        }
+        if ( oLeft > 0 ) {
+          css = css+'left:'+oLeft+'px;';
+        }
+
+        this.boxPositionCSS = css
+        return css
+      },
+      setup: function(){
+        let content = this.boxContent;
+        let position = this.boxPositionCSS;
+        let chevron = '<span class="chevron"></span>'
+        let box = '<div class="new-box" style="' + position + '">' + content + chevron + '</div>';
+        this.box = box;
+        return box;
+      }
+
+    },
+    this.style = {
+      appliedStyle: false,
+      baseStyle: '',
+      setup: function(){
+
+        let css = '';
+
+        if ( arguments.length > 0 ) {
+          let args = Array.prototype.slice.call( arguments )
+          args = args.join( '' )
+          css = args;
+        }
+
+        let cssString = '<style type="text/css">' + css + '</style>'
+        return( cssString )
+      },
+      setStyle: function() {
+        if ( this.baseStyle.length == 0 ) {
+          let args = [
+            // Chevron styling
+            ".chevron{ width: 0; border-left: 10px solid transparent; border-right: 10px solid transparent; border-top:10px solid rgba(255,100,0,1);position:absolute; bottom:-8px }",
+            // Box styling
+            ".new-box{font-family:roboto,sans-serif;top: 35px; background:rgba(255,100,0,1);color:white;height:20px;display:flex;justify-content:center;align-items:center;padding:5px 20px;position:absolute;z-index: 100000;}",
+            "@media(max-width:803px){.new-box{display:none}}"
+          ]; // To-do: make this into a library so you can manually set the styles
+          let argAdd;
+          args = args.join('')
+          if ( arguments.length > 0 ) { // allows you to define a new styling using: newBoxVer.style.returnStyle(styles)
+            argAdd = Array.prototype.slice.call( arguments ) // Do some slicin' wizardry
+            argAdd = argAdd.join('') // Join arguments into a string
+            args = args+argAdd;
+          }
+
+
+          this.baseStyle = args
+        }
+      },
+      addStyle: function(){
+        this.setStyle()
+        let styling = this.baseStyle;
+        let formattedStyling = this.setup(styling);
+        let header = document.getElementsByTagName('head')[0]
+        header.innerHTML = header.innerHTML + formattedStyling
+        this.appliedStyle = true;
+        return formattedStyling;
+      }
+    }
+    this.addBox = function() {
+      let args = arguments[0];
+      console.log(args.content)
+
+      // Change content from default 'test'
+      if( args.content ){
+        let content = args.content
+        this.box.setContent(content)
+      }
+
+      if ( args.targetId ) {
+        let targetId = args.targetId
+        this.box.calcBoxPosition( targetId )
+      }
+
+      // Add to base style
+      if ( this.style.appliedStyle == false ) {
+        if ( args.baseStyle ) {
+          let baseStyle
+          if ( typeof args.baseStyle == 'string' ) {
+            baseStyle = args.baseStyle
+          } else {
+            baseStyle = args.baseStyle.join('')
+          }
+          this.style.setStyle(baseStyle)
+        }
+        this.style.addStyle()
+      }
+
+      let box = this.box.setup() // setup box
+      let boxContainer = document.getElementsByTagName('body')[0] // set container to body by default
+		console.log(boxContainer)
+      if ( args.containerId ) {
+        let containerId = args.containerId
+        if ( document.getElementById( containerId ) != null ){
+          console.log('Container valid')
+          boxContainer = document.getElementById( containerId );
+        }
+      }
+      
+      boxContainer.innerHTML = box + boxContainer.innerHTML;
+      
+      return args;
+    }
+
+  }</script> <script>jQuery(function ($) {
+
+	// the setup
+	firstCheck = true;
+	secondCheck = true;
+	thirdCheck = true;
+    fourthCheck = true;
+    fifthCheck = true;
+
+  // on scroll
+	$(window).scroll(function() {
+
+
+		if(firstCheck == true) {
+			if ($(document).scrollTop() > 112) {
+				// google event goes here
+                gtag('event', 'scroll-112');
+				firstCheck = false;
+		  }
+		}
+
+
+		if(secondCheck == true) {
+			if ($(document).scrollTop() > 1112) {
+				// google event goes here
+                gtag('event', 'scroll-1112'); 
+				secondCheck = false;
+		  }
+		}
+
+
+		if(thirdCheck == true) {
+			if ($(document).scrollTop() > 2112) {
+				// google event goes here
+                gtag('event', 'scroll-2112'); 
+				thirdCheck = false;
+		  }
+		}
+
+		if(fourthCheck == true) {
+			if ($(document).scrollTop() > 3112) {
+                gtag('event', 'scroll-3112'); 
+				fourthCheck = false;
+		  }
+		}
+
+		if(fifthCheck == true) {
+			if ($(document).scrollTop() > 4112) {
+                gtag('event', 'scroll-4112'); 
+				fifthCheck = false;
+		  }
+		}
+	});
+
+setTimeout(function(){ gtag('event', 'time-10seconds'); }, 10000);
+  
+setTimeout(function(){ gtag('event', 'time-15seconds'); }, 15000);
+  
+setTimeout(function(){ gtag('event', 'time-30seconds'); }, 30000);
+
+setTimeout(function(){ gtag('event', 'time-60seconds'); }, 60000);
+
+setTimeout(function(){ gtag('event', 'time-120seconds'); }, 120000);
+
+});</script> <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script> <script>if (window.matchMedia('(display-mode: standalone)').matches) {
+  var OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "1fcd03b6-e787-423f-a700-396c0abfd335",
+    });
+  });
+  //console.log("pwa");
+}
+else{
+  var OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "3ab0e75d-ddfd-41f8-a2fa-76cd57929436",
+    });
+  });    
+  //console.log("os");
+}</script><link rel="icon" href="https://securecdn.pymnts.com/wp-content/uploads/2019/04/cropped-512-1-32x32.jpg" sizes="32x32" /><link rel="icon" href="https://securecdn.pymnts.com/wp-content/uploads/2019/04/cropped-512-1-192x192.jpg" sizes="192x192" /><link rel="apple-touch-icon-precomposed" href="https://securecdn.pymnts.com/wp-content/uploads/2019/04/cropped-512-1-180x180.jpg" /><meta name="msapplication-TileImage" content="https://securecdn.pymnts.com/wp-content/uploads/2019/04/cropped-512-1-270x270.jpg" /> <noscript><style>.wpb_animate_when_almost_visible { opacity: 1; }</style></noscript></head><body class="post-template-default single single-post postid-572020 single-format-standard custom-background wp-schema-pro-1.3.0 wpb-js-composer js-comp-ver-6.0.3 vc_responsive"><div id="site" class="left relative"><div id="site-wrap" class="left relative"><div id="fly-wrap"><div class="fly-wrap-out"><div class="fly-side-wrap"><ul class="fly-bottom-soc left relative"><li class="fb-soc"> <a href="https://www.facebook.com/pymnts" target="_blank"> <i class="fa fa-facebook-square fa-2"></i> </a></li><li class="twit-soc"> <a href="https://twitter.com/pymnts" target="_blank"> <i class="fa fa-twitter fa-2"></i> </a></li><li class="yt-soc"> <a href="https://www.youtube.com/pymntsmedia" target="_blank"> <i class="fa fa-youtube-play fa-2"></i> </a></li><li class="link-soc"> <a href="https://www.linkedin.com/company/pymnts-com" target="_blank"> <i class="fa fa-linkedin fa-2"></i> </a></li><li class="rss-soc"> <a href="https://www.pymnts.com/feed/rss/" target="_blank"> <i class="fa fa-rss fa-2"></i> </a></li></ul></div><div class="fly-wrap-in"><div id="fly-menu-wrap"><nav class="fly-nav-menu left relative"><div class="menu-fly-out-container"><ul id="menu-fly-out" class="menu"><li id="menu-item-200294" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-200294"><a href="https://www.pymnts.com/today-on-pymnts/">Today&#8217;s News</a></li><li id="menu-item-597075" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-597075"><a href="https://www.pymnts.com/retail/">Retail</a></li><li id="menu-item-597074" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-597074"><a href="https://www.pymnts.com/b2b/">B2B</a></li><li id="menu-item-200295" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-200295"><a href="https://www.pymnts.com/author/karen-webster/">Opinion</a></li><li id="menu-item-578391" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-578391"><a href="https://www.pymnts.com/tag/editors-picks/">Editors’ Picks</a></li><li id="menu-item-200299" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-200299"><a href="https://www.pymnts.com/study/">Studies</a></li><li id="menu-item-200300" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-200300"><a href="https://www.pymnts.com/tracker/">Trackers®</a></li><li id="menu-item-609096" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-609096"><a href="https://www.pymnts.com/podcasts/">Podcasts</a></li><li id="menu-item-589335" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-589335"><a href="/masterclass/">MasterClass</a></li><li id="menu-item-641031" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-641031"><a href="#">Topics</a><ul class="sub-menu"><li id="menu-item-641039" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-641039"><a href="https://www.pymnts.com/artificial-intelligence/">Artificial Intelligence</a></li><li id="menu-item-641041" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-641041"><a href="/b2b/">B2B</a></li><li id="menu-item-641033" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-641033"><a href="https://www.pymnts.com/banking/">Banking</a></li><li id="menu-item-641036" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-641036"><a href="https://www.pymnts.com/credit-unions/">Credit Unions</a></li><li id="menu-item-641043" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-641043"><a href="https://www.pymnts.com/connected-cars/">Connected Cars</a></li><li id="menu-item-641045" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-641045"><a href="/cross-border-payments-today/">Cross-Border Payments</a></li><li id="menu-item-641034" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-641034"><a href="https://www.pymnts.com/cybersecurity/">Cybersecurity</a></li><li id="menu-item-641048" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-641048"><a href="/digital-identity/">Digital Idenity</a></li><li id="menu-item-641035" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-641035"><a href="https://www.pymnts.com/gig-economy/">Gig Economy</a></li><li id="menu-item-641049" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-641049"><a href="https://www.pymnts.com/healthcare-payments/">Healthcare Payments</a></li><li id="menu-item-641053" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-641053"><a href="/internet-of-things/">Internet of Things</a></li><li id="menu-item-655754" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-655754"><a href="https://www.pymnts.com/open-banking/">Open Banking</a></li><li id="menu-item-641056" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-641056"><a href="/real-time-payments/">Real-Time Payments</a></li><li id="menu-item-641057" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-641057"><a href="/restaurant-technology/">Restaurant Technology</a></li><li id="menu-item-641058" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-641058"><a href="/retail/">Retail</a></li><li id="menu-item-641037" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-641037"><a href="https://www.pymnts.com/travel-payments/">Travel Payments</a></li></ul></li></ul></div></nav></div></div></div></div><div id="head-main-wrap" class="left relative"><div id="head-main-top" class="left relative"><div class="leader-wrap-out"><div class="leader-wrap-in"><div id="logo-leader-wrap" class="left relative"><div class="logo-leader-out"><div class="logo-left-wrap left relative"> <a itemprop="url" href="https://www.pymnts.com/"><img itemprop="logo" src="https://securecdn.pymnts.com/wp-content/uploads/2017/12/PYMNTS-logo-white-5.png" alt="PYMNTS.com" /></a></div><div class="logo-leader-in"><div class="leader-right-wrap left relative"></div></div></div></div></div></div></div><div id="main-nav-wrap"><div class="nav-out"><div class="nav-in"><div id="main-nav-cont" class="left" itemscope itemtype="https://schema.org/Organization"><div class="nav-logo-out"><div id="logo-force-width" class="nav-left-wrap left relative"><div class="fly-but-wrap left relative"> <span></span> <span></span> <span></span> <span></span> <img src="https://securecdn.pymnts.com/wp-content/themes/flex-mag-sixspoke/images/menu-icon.png" /><div class="sections"><div>Sections</div></div></div><div class="nav-logo-fade left"> <a href="https://www.pymnts.com/"><img src="https://securecdn.pymnts.com/wp-content/uploads/2017/12/PYMNTS-logo-white_padding.png" alt="PYMNTS.com" /></a></div></div><div id="menu-force" class="nav-logo-in"><div class="nav-menu-out"><div class="nav-menu-in"><nav class="main-menu-wrap left"><div class="menu-custom-container"><ul id="menu-custom" class="menu"><li id="menu-item-630716" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-630716"><a href="https://www.pymnts.com/today-on-pymnts/">Today&#8217;s News</a></li><li id="menu-item-597073" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-597073"><a href="https://www.pymnts.com/retail/">Retail</a></li><li id="menu-item-597072" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-597072"><a href="https://www.pymnts.com/b2b/">B2B</a></li><li id="menu-item-180793" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-180793"><a href="https://www.pymnts.com/author/karen-webster/">OPINION</a></li><li id="menu-item-601969" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-601969"><a href="https://www.pymnts.com/study/">STUDIES</a></li><li id="menu-item-601970" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-601970"><a href="https://www.pymnts.com/tracker/">TRACKERS®</a></li><li id="menu-item-375872" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-375872"><a href="https://www.pymnts.com/podcasts/">Podcasts</a></li><li id="menu-item-375869" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-375869"><a target="_blank" href="https://www.pymnts.com/masterclass">MASTERCLASS</a></li><li id="menu-item-640423" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-640423"><a href="#topics">Topics</a></li></ul></div></nav></div><div class="nav-right-wrap relative"><div class="nav-search-wrap left relative"> <span class="nav-search-but left"><i class="fa fa-search fa-2"></i></span><div class="search-fly-wrap"><form method="get" id="searchform" action="https://www.pymnts.com//"> <input type="text" name="s" id="s" value="Type search term and press enter" onfocus='if (this.value == "Type search term and press enter") { this.value = ""; }' onblur='if (this.value == "") { this.value = "Type search term and press enter"; }' /> <input type="hidden" id="searchsubmit" value="Search" /></form></div></div> <a href="https://www.facebook.com/pymnts" target="_blank"> <span class="nav-soc-but"><i class="fa fa-facebook fa-2"></i></span> </a> <a href="https://twitter.com/pymnts" target="_blank"> <span class="nav-soc-but"><i class="fa fa-twitter fa-2"></i></span> </a></div></div></div></div></div></div></div></div><div class="pymnts-submenu"><nav class="pymnts-wrap left"><div class="menu-topics-container"><ul id="menu-topics" class="menu"><li id="menu-item-640383" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-640383"><a href="#one">Row One</a><ul class="sub-menu"><li id="menu-item-640396" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-640396"><a href="https://www.pymnts.com/artificial-intelligence/">Artificial Intelligence</a></li><li id="menu-item-640459" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-640459"><a href="/b2b/">B2B</a></li><li id="menu-item-640371" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-640371"><a href="https://www.pymnts.com/banking/">Banking</a></li></ul></li><li id="menu-item-640387" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-640387"><a href="#two">Row Two</a><ul class="sub-menu"><li id="menu-item-640374" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-640374"><a href="https://www.pymnts.com/credit-unions/">Credit Unions</a></li><li id="menu-item-640402" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-640402"><a href="https://www.pymnts.com/connected-cars/">Connected Cars</a></li><li id="menu-item-640394" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-640394"><a href="/cross-border-payments-today/">Cross-Border Payments</a></li></ul></li><li id="menu-item-640385" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-640385"><a href="#three">Row Three</a><ul class="sub-menu"><li id="menu-item-640372" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-640372"><a href="https://www.pymnts.com/cybersecurity/">Cybersecurity</a></li><li id="menu-item-640376" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-640376"><a href="https://www.pymnts.com/digital-identity/">Digital Identity</a></li><li id="menu-item-640373" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-640373"><a href="https://www.pymnts.com/gig-economy/">Gig Economy</a></li></ul></li><li id="menu-item-640386" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-640386"><a href="#four">Row Four</a><ul class="sub-menu"><li id="menu-item-640397" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-640397"><a href="https://www.pymnts.com/healthcare-payments/">Healthcare Payments</a></li><li id="menu-item-640378" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-640378"><a href="https://www.pymnts.com/internet-of-things/">Internet of Things</a></li><li id="menu-item-655757" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-655757"><a href="https://www.pymnts.com/open-banking/">Open Banking</a></li></ul></li><li id="menu-item-640392" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-640392"><a href="#five">Row Five</a><ul class="sub-menu"><li id="menu-item-640377" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-640377"><a href="https://www.pymnts.com/real-time-payments/">Real-Time Payments</a></li><li id="menu-item-640399" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-640399"><a href="https://www.pymnts.com/restaurant-technology/">Restaurant Technology</a></li><li id="menu-item-640465" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-640465"><a href="/retail/">Retail</a></li></ul></li><li id="menu-item-655759" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-655759"><a href="#six">Row Six</a><ul class="sub-menu"><li id="menu-item-640375" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-640375"><a href="https://www.pymnts.com/travel-payments/">Travel Payments</a></li></ul></li></ul></div><div class="fly-but-wrap2 left relative fly-open"> <span></span> <span></span> <span></span></div></nav></div></div><div id="body-main-wrap" class="left relative" itemscope itemtype="https://schema.org/Article"><div class="body-main-out relative"><div class="body-main-in"><div id="body-main-cont" class="left relative"><div id="post-main-wrap" class="left relative"><div class="post-wrap-out1"><div class="post-wrap-in1"><div id="post-left-col" class="relative"><article id="post-area" class="post-572020 post type-post status-publish format-standard has-post-thumbnail hentry category-today-in-data tag-commerce tag-commerce-data tag-cybercrime tag-fraud tag-money-laundering tag-news tag-payments tag-payments-data tag-retail tag-retail-data tag-today-in-data"><header id="post-header"> <a class="post-cat-link" href="https://www.pymnts.com/category/today-in-data/"><span class="post-head-cat">Today In Data</span></a><h1 class="post-title left" itemprop="name headline">Today In Data: The Challenges Of Finding And Protecting Value</h1><div id="post-info-wrap" class="left relative"><div class="post-info-out"><div class="post-info-in"><div class="post-info-right left relative"><div class="post-info-name left relative"> <span class="post-info-text">By</span> <span itemtype="https://schema.org/Organization" itemscope="itemscope" itemprop="publisher" style="display:none">PYMNTS <span itemscope="itemscope" itemprop="logo" style="display:none" itemtype="http://schema.org/ImageObject"><link itemprop="url" href="https://securecdn.pymnts.com/wp-content/uploads/2019/06/112-1.jpg" style="display:none"/> <span itemprop="width" style="display:none">60</span> <span itemprop="height" style="display:none">60</span> </span> <span itemprop="name" style="display:none">PYMNTS.com</span></span><link itemprop="url" href="https://www.pymnts.com/today-in-data/2018/payments-commerce-value-retail/" style="display:none"/> <span class="author-name vcard fn" itemprop="author"><a href="https://www.pymnts.com/author/pymnts/" title="Posts by PYMNTS" rel="author">PYMNTS</a><link itemprop="image" href="https://securecdn.pymnts.com/wp-content/uploads/2019/06/112-1.jpg" style="display:none"/> </span> <span class="author-twitter"><a href="https://twitter.com/pymnts" class="twitter-but" target="_blank"><i class="fa fa-twitter fa-2"></i></a> </span> <span class="author-email"><a href="mailto:webmaster@PYMNTS.com"><i class="fa fa-envelope fa-2"></i></a></span></div><div class="post-info-date left relative"> <span class="post-info-text">Posted on</span> <span class="post-date"> <time class="post-date updated" itemprop="datePublished" datetime="2018-12-17"> December 17, 2018</time> <time style="display:none;" itemprop="dateModified">December 14, 2018  6:01 pm</time> </span></div></div></div></div></div></header><div id="post-feat-img" class="left relative"> <img width="1000" height="631" src="https://securecdn.pymnts.com/wp-content/uploads/2018/12/payments-commerce-value-retail-data.jpg" class="attachment- size- wp-post-image" alt="The Challenges of Finding and Protecting Value" itemprop="image" srcset="https://securecdn.pymnts.com/wp-content/uploads/2018/12/payments-commerce-value-retail-data.jpg 1000w, https://securecdn.pymnts.com/wp-content/uploads/2018/12/payments-commerce-value-retail-data-258x163.jpg 258w, https://securecdn.pymnts.com/wp-content/uploads/2018/12/payments-commerce-value-retail-data-768x485.jpg 768w, https://securecdn.pymnts.com/wp-content/uploads/2018/12/payments-commerce-value-retail-data-457x288.jpg 457w" sizes="(max-width: 1000px) 100vw, 1000px" /><div class="post-feat-text"></div></div><div id="content-area" itemprop="articleBody" class="post-572020 post type-post status-publish format-standard has-post-thumbnail hentry category-today-in-data tag-commerce tag-commerce-data tag-cybercrime tag-fraud tag-money-laundering tag-news tag-payments tag-payments-data tag-retail tag-retail-data tag-today-in-data"><div class="post-cont-out"><div class="post-cont-in"><div id="content-main" class="left relative"><section class="social-sharing-top"> <a href="#" onclick="window.open('https://www.facebook.com/sharer.php?u=https://www.pymnts.com/today-in-data/2018/payments-commerce-value-retail/&amp;t=Today In Data: The Challenges Of Finding And Protecting Value', 'facebookShare', 'width=626,height=436'); return false;" title="Share on Facebook"><div class="facebook-share"><span class="fb-but1"><i class="fa fa-facebook fa-2"></i></span><span class="social-text">Share</span></div></a> <a href="#" onclick="window.open('https://twitter.com/share?text=Today In Data: The Challenges Of Finding And Protecting Value -&amp;url=https://www.pymnts.com/today-in-data/2018/payments-commerce-value-retail/', 'twitterShare', 'width=626,height=436'); return false;" title="Tweet This Post"><div class="twitter-share"><span class="twitter-but1"><i class="fa fa-twitter fa-2"></i></span><span class="social-text">Tweet</span></div></a> <a href="sms://&amp;body=Today In Data: The Challenges Of Finding And Protecting Value https://www.pymnts.com/today-in-data/2018/payments-commerce-value-retail/"><div class="whatsapp-share"><span class="whatsapp-but1"><i class="fa fa-whatsapp fa-2"></i></span><span class="social-text">Share</span></div></a> <a href="#" onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.pymnts.com/today-in-data/2018/payments-commerce-value-retail/&amp;title=Today In Data: The Challenges Of Finding And Protecting Value&amp;summary=&amp;source=', 'linkedinShare', 'width=626,height=436'); return false;" title="Share on LinkedIn"><div class="linkedin-share"><span class="linkedin-but1"><i class="fa fa-linkedin fa-2"></i></span><span class="social-text">Share</span></div></a> <a href="#" onclick="window.open('https://www.stumbleupon.com/submit?url=https://www.pymnts.com/today-in-data/2018/payments-commerce-value-retail/', 'linkedinShare', 'width=626,height=436,scrollbars=1'); return false;" title="Share on StumbleUpon"><div class="stumbleupon-share"><span class="stumbleupon-but1"><i class="fa fa-stumbleupon fa-2"></i></span><span class="social-text">Share</span></div></a> <a href="#" onclick="jQuery('article').addClass('no-print'); jQuery(this).closest('article').removeClass('no-print'); window.print(); return false;"><div class="print-share"><span class="print-but1"><i class="fa fa-print fa-2"></i></span><span class="social-text">Print</span></div></a> <a href="mailto:?subject=Today In Data: The Challenges Of Finding And Protecting Value&amp;BODY=I found this article interesting and thought of sharing it with you. Check it out: https://www.pymnts.com/today-in-data/2018/payments-commerce-value-retail/"><div class="email-share"><span class="email-but"><i class="fa fa-envelope fa-2"></i></span><span class="social-text">Email</span></div></a> <a href="#disqus_thread"><div class="social-comments comment-click-572020"><i class="fa fa-commenting fa-2"></i></div></a></section><p>In recent years, the payments and commerce ecosystem has been about the finding new value – and then finding ways to protect it. It’s why Amazon is taking back <a href="https://www.pymnts.com/amazon-delivery/2018/instacart-whole-foods-logistics-digital-supermarket/" target="_blank" rel="noopener">Whole Foods delivery from Instacart</a>, the multiple billion-dollar brand built for bringing groceries to consumers’ front doors. It’s why the race to <a href="https://www.pymnts.com/news/security-and-risk/2018/vocalink-mule-accounts-money-laundering-tech/" target="_blank" rel="noopener">fight back the fraudsters</a>, and <a href="https://www.pymnts.com/bank-regulation/2018/fincen-occ-compliance-innovation/" target="_blank" rel="noopener">level up compliance</a>, is always ongoing as cybercriminals keep slipping off with ill-gotten gains. Value creation is always happening – but when it comes to benefits from the value created, that race remains ongoing.</p><p><strong><img class="alignnone size-full wp-image-572028" src="https://securecdn.pymnts.com/wp-content/uploads/2018/12/800x1400-TiD-12.14.png" alt="" width="800" height="1400" srcset="https://securecdn.pymnts.com/wp-content/uploads/2018/12/800x1400-TiD-12.14.png 800w, https://securecdn.pymnts.com/wp-content/uploads/2018/12/800x1400-TiD-12.14-103x180.png 103w, https://securecdn.pymnts.com/wp-content/uploads/2018/12/800x1400-TiD-12.14-768x1344.png 768w, https://securecdn.pymnts.com/wp-content/uploads/2018/12/800x1400-TiD-12.14-182x319.png 182w" sizes="(max-width: 800px) 100vw, 800px" /></strong></p><p><strong>Data:</strong></p><p>$100 billion: The estimated worth of digital supermarket sales by 2025.</p><p>$7.6 billion: Instacart’s valuation as of its last funding round.</p><p>£100 million: The amount lost to fraud in the U.K. in the first six months of 2018 alone.</p><p>75 percent: Share of money laundering accounts in the U.K. that are tied to short “distances” between the capturing, moving and, ultimately, the using of funds.</p><p>50 percent: Share of firms and CCOs that are using technology in compliance efforts.</p><div class="posts-nav-link"></div><div class="post-tags"> <span class="post-tags-header">Related Items:</span><span itemprop="keywords"><a href="https://www.pymnts.com/tag/commerce/" rel="tag">Commerce</a>, <a href="https://www.pymnts.com/tag/commerce-data/" rel="tag">commerce data</a>, <a href="https://www.pymnts.com/tag/cybercrime/" rel="tag">Cybercrime</a>, <a href="https://www.pymnts.com/tag/fraud/" rel="tag">fraud</a>, <a href="https://www.pymnts.com/tag/money-laundering/" rel="tag">money laundering</a>, <a href="https://www.pymnts.com/tag/news/" rel="tag">News</a>, <a href="https://www.pymnts.com/tag/payments/" rel="tag">payments</a>, <a href="https://www.pymnts.com/tag/payments-data/" rel="tag">payments data</a>, <a href="https://www.pymnts.com/tag/retail/" rel="tag">Retail</a>, <a href="https://www.pymnts.com/tag/retail-data/" rel="tag">retail data</a>, <a href="https://www.pymnts.com/tag/today-in-data/" rel="tag">Today in Data</a></span></div><div class="social-sharing-bot"> <a href="#" onclick="window.open('https://www.facebook.com/sharer.php?u=https://www.pymnts.com/today-in-data/2018/payments-commerce-value-retail/&amp;t=Today In Data: The Challenges Of Finding And Protecting Value', 'facebookShare', 'width=626,height=436'); return false;" title="Share on Facebook"><div class="facebook-share"><span class="fb-but1"><i class="fa fa-facebook fa-2"></i></span><span class="social-text">Share</span></div></a> <a href="#" onclick="window.open('https://twitter.com/share?text=Today In Data: The Challenges Of Finding And Protecting Value -&amp;url=https://www.pymnts.com/today-in-data/2018/payments-commerce-value-retail/', 'twitterShare', 'width=626,height=436'); return false;" title="Tweet This Post"><div class="twitter-share"><span class="twitter-but1"><i class="fa fa-twitter fa-2"></i></span><span class="social-text">Tweet</span></div></a> <a href="sms://&amp;body=Today In Data: The Challenges Of Finding And Protecting Value https://www.pymnts.com/today-in-data/2018/payments-commerce-value-retail/"><div class="whatsapp-share"><span class="whatsapp-but1"><i class="fa fa-whatsapp fa-2"></i></span><span class="social-text">Share</span></div></a> <a href="#" onclick="window.open('https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.pymnts.com/today-in-data/2018/payments-commerce-value-retail/&amp;title=Today In Data: The Challenges Of Finding And Protecting Value&amp;summary=&amp;source=', 'linkedinShare', 'width=626,height=436'); return false;" title="Share on LinkedIn"><div class="linkedin-share"><span class="linkedin-but1"><i class="fa fa-linkedin fa-2"></i></span><span class="social-text">Share</span></div></a> <a href="#" onclick="window.open('https://www.stumbleupon.com/submit?url=https://www.pymnts.com/today-in-data/2018/payments-commerce-value-retail/', 'linkedinShare', 'width=626,height=436,scrollbars=1'); return false;" title="Share on StumbleUpon"><div class="stumbleupon-share"><span class="stumbleupon-but1"><i class="fa fa-stumbleupon fa-2"></i></span><span class="social-text">Share</span></div></a> <a href="#" onclick="jQuery('article').addClass('no-print'); jQuery(this).closest('article').removeClass('no-print'); window.print(); return false;"><div class="print-share"><span class="print-but1"><i class="fa fa-print fa-2"></i></span><span class="social-text">Print</span></div></a> <a href="mailto:?subject=Today In Data: The Challenges Of Finding And Protecting Value&amp;BODY=I found this article interesting and thought of sharing it with you. Check it out: https://www.pymnts.com/today-in-data/2018/payments-commerce-value-retail/"><div class="email-share"><span class="email-but"><i class="fa fa-envelope fa-2"></i></span><span class="social-text">Email</span></div></a></div><div class="mvp-related-posts left relative"><h4 class="post-header"><span class="post-header">Recommended for you</span></h4><ul><li><div class="mvp-related-img left relative"> <a href="https://www.pymnts.com/news/ecommerce/2019/discover-whats-around-the-corner-for-merchant-payments/" rel="bookmark" title="Discover: What’s Around The Corner For Merchant Payments?"> <img width="300" height="180" src="https://securecdn.pymnts.com/wp-content/uploads/2019/11/Discover-Masterclass-300x180.png" class="reg-img wp-post-image" alt="payments real time groundwork" srcset="https://securecdn.pymnts.com/wp-content/uploads/2019/11/Discover-Masterclass-300x180.png 300w, https://securecdn.pymnts.com/wp-content/uploads/2019/11/Discover-Masterclass-450x270.png 450w, https://securecdn.pymnts.com/wp-content/uploads/2019/11/Discover-Masterclass-840x501.png 840w" sizes="(max-width: 300px) 100vw, 300px" /> <img width="80" height="80" src="https://securecdn.pymnts.com/wp-content/uploads/2019/11/Discover-Masterclass-80x80.png" class="mob-img wp-post-image" alt="payments real time groundwork" srcset="https://securecdn.pymnts.com/wp-content/uploads/2019/11/Discover-Masterclass-80x80.png 80w, https://securecdn.pymnts.com/wp-content/uploads/2019/11/Discover-Masterclass-470x470.png 470w" sizes="(max-width: 80px) 100vw, 80px" /> </a></div><div class="mvp-related-text left relative"> <a href="https://www.pymnts.com/news/ecommerce/2019/discover-whats-around-the-corner-for-merchant-payments/">Discover: What’s Around The Corner For Merchant Payments?</a></div></li><li><div class="mvp-related-img left relative"> <a href="https://www.pymnts.com/digital-payments/2019/how-cross-border-payments-help-insurance-mature-digitally/" rel="bookmark" title="How Cross-Border Payments Help Insurance Mature Digitally"> <img width="300" height="180" src="https://securecdn.pymnts.com/wp-content/uploads/2019/11/cover-genius-digital-insurance-payments-300x180.jpg" class="reg-img wp-post-image" alt="How Cross-Border Payments Digitize Insurance" srcset="https://securecdn.pymnts.com/wp-content/uploads/2019/11/cover-genius-digital-insurance-payments-300x180.jpg 300w, https://securecdn.pymnts.com/wp-content/uploads/2019/11/cover-genius-digital-insurance-payments-1000x600.jpg 1000w, https://securecdn.pymnts.com/wp-content/uploads/2019/11/cover-genius-digital-insurance-payments-450x270.jpg 450w" sizes="(max-width: 300px) 100vw, 300px" /> <img width="80" height="80" src="https://securecdn.pymnts.com/wp-content/uploads/2019/11/cover-genius-digital-insurance-payments-80x80.jpg" class="mob-img wp-post-image" alt="How Cross-Border Payments Digitize Insurance" srcset="https://securecdn.pymnts.com/wp-content/uploads/2019/11/cover-genius-digital-insurance-payments-80x80.jpg 80w, https://securecdn.pymnts.com/wp-content/uploads/2019/11/cover-genius-digital-insurance-payments-687x691.jpg 687w, https://securecdn.pymnts.com/wp-content/uploads/2019/11/cover-genius-digital-insurance-payments-550x550.jpg 550w, https://securecdn.pymnts.com/wp-content/uploads/2019/11/cover-genius-digital-insurance-payments-470x470.jpg 470w" sizes="(max-width: 80px) 100vw, 80px" /> </a></div><div class="mvp-related-text left relative"> <a href="https://www.pymnts.com/digital-payments/2019/how-cross-border-payments-help-insurance-mature-digitally/">How Cross-Border Payments Help Insurance Mature Digitally</a></div></li><li><div class="mvp-related-img left relative"> <a href="https://www.pymnts.com/news/partnerships-acquisitions/2019/why-isvs-dont-need-to-go-the-payfac-route/" rel="bookmark" title="Why ISVs Don&#8217;t Need To Go The PayFac Route"> <img width="300" height="180" src="https://securecdn.pymnts.com/wp-content/uploads/2016/12/payments-year-of-partnerships-via-api-300x180.jpg" class="reg-img wp-post-image" alt="Why ISVs Don&#039;t Need To Go The PayFac Route" srcset="https://securecdn.pymnts.com/wp-content/uploads/2016/12/payments-year-of-partnerships-via-api-300x180.jpg 300w, https://securecdn.pymnts.com/wp-content/uploads/2016/12/payments-year-of-partnerships-via-api-1000x600.jpg 1000w, https://securecdn.pymnts.com/wp-content/uploads/2016/12/payments-year-of-partnerships-via-api-450x270.jpg 450w" sizes="(max-width: 300px) 100vw, 300px" /> <img width="80" height="80" src="https://securecdn.pymnts.com/wp-content/uploads/2016/12/payments-year-of-partnerships-via-api-80x80.jpg" class="mob-img wp-post-image" alt="Why ISVs Don&#039;t Need To Go The PayFac Route" /> </a></div><div class="mvp-related-text left relative"> <a href="https://www.pymnts.com/news/partnerships-acquisitions/2019/why-isvs-dont-need-to-go-the-payfac-route/">Why ISVs Don&#8217;t Need To Go The PayFac Route</a></div></li></ul></div><div id="emailsignup" class="subscribe-wrap left relative"><div class="subscribe-image left"> <img src="https://securecdn.pymnts.com/wp-content/themes/flex-mag-sixspoke/images/pymnts-iphone-email.png" /></div><div class="subscribe-email"><form method="POST" name="subscribeForm" id="subscribeForm"> <input id="acknowledge" name="acknowledge" type="hidden" value="" /><input id="landing" name="landing" type="hidden" value="https://www.pymnts.com/today-in-data/2018/payments-commerce-value-retail/?es=1" /><input id="errorPage" name="errorPage" type="hidden" value="https://eou1.netatlantic.com:443/NAForms/error_page.jsp" /><input id="organization" name="organization" type="hidden" value="pymnts" /><input id="subOrganization" name="subOrganization" type="hidden" value="" /><input id="formType" name="formType" type="hidden" value="subscribe" /><input id="ids" name="ids" type="hidden" value="US_FL_14-10-22" /><input id="host" name="host" type="hidden" value="pymnts.netatlantic.com" /><input id="txnid" name="txnid" type="hidden" value="" /><p class="head">Get our hottest stories delivered to your inbox.</p><p class="sub">Sign up for the PYMNTS.com Newsletter to get updates on top stories and viral hits.</p><table id="formTable"><tbody><tr><td class="hidethis">email:</td><td><input class="email-text" name="email" required="" type="text" placeholder="EMAIL" /></td><td><input class="email-button" type="submit" value="SIGN UP" onclick="submitForm(this.form); return false" /></td></tr></tbody></table></form></div></div></div></div></div></div></article><nav class="navigation post-navigation" role="navigation"><h2 class="screen-reader-text">Post navigation</h2><div class="nav-links"><div class="nav-previous"><a href="https://www.pymnts.com/news/retail/2018/sales-economists-inflation-consumer-spending/" rel="prev">Core Retail Sales Grew 0.9 Percent In November</a></div><div class="nav-next"><a href="https://www.pymnts.com/news/retail/2018/returned-merchandise-resellers-bstock-ecommerce/" rel="next">Resellers Find Treasure Trove In Returned Goods</a></div></div></nav></div></div><div id="post-right-col" class="relative"><div class="side-title-wrap left relative"><h3 class="side-list-title">TRENDING RIGHT NOW</h3></div><div class="side-pop-wrap left relative"><div class="feat-widget-cont left relative"><div class="feat-widget-wrap left relative"> <a href="https://www.pymnts.com/bank-regulation/2019/three-small-us-banks-collapse-over-past-month/"><div class="feat-widget-img left relative"> <img width="300" height="180" src="https://securecdn.pymnts.com/wp-content/uploads/2019/11/FDIC-U.S.-banks-bank-failures-closures-NJ-TX-OH-assets-deposits-news-300x180.jpg" class="reg-img wp-post-image" alt="FDIC, U.S. banks, bank failures, closures, NJ, TX, OH, assets, deposits, news" srcset="https://securecdn.pymnts.com/wp-content/uploads/2019/11/FDIC-U.S.-banks-bank-failures-closures-NJ-TX-OH-assets-deposits-news-300x180.jpg 300w, https://securecdn.pymnts.com/wp-content/uploads/2019/11/FDIC-U.S.-banks-bank-failures-closures-NJ-TX-OH-assets-deposits-news-450x270.jpg 450w" sizes="(max-width: 300px) 100vw, 300px" /> <img width="80" height="80" src="https://securecdn.pymnts.com/wp-content/uploads/2019/11/FDIC-U.S.-banks-bank-failures-closures-NJ-TX-OH-assets-deposits-news-80x80.jpg" class="mob-img wp-post-image" alt="FDIC, U.S. banks, bank failures, closures, NJ, TX, OH, assets, deposits, news" /><div class="feat-info-wrap"><div class="feat-info-views"> <i class="fa fa-eye fa-2"></i> <span class="feat-info-text">6.7K</span></div></div><div class="feat-vid-but"> <i class="fa fa-play fa-3"></i></div></div><div class="feat-widget-text"> <span class="side-list-cat">Bank Regulation</span><h2>Three Small US Banks Collapse Over Past Month</h2></div> </a></div><div class="feat-widget-wrap left relative"> <a href="https://www.pymnts.com/news/payments-innovation/2019/why-google-citi-deal-isnt-about-becoming-a-bank/"><div class="feat-widget-img left relative"> <img width="300" height="180" src="https://securecdn.pymnts.com/wp-content/uploads/2019/11/google-citi-partnership-digital-banking-300x180.jpg" class="reg-img wp-post-image" alt="Why Google/Citi Isn’t About Becoming A Bank" srcset="https://securecdn.pymnts.com/wp-content/uploads/2019/11/google-citi-partnership-digital-banking-300x180.jpg 300w, https://securecdn.pymnts.com/wp-content/uploads/2019/11/google-citi-partnership-digital-banking-1000x600.jpg 1000w, https://securecdn.pymnts.com/wp-content/uploads/2019/11/google-citi-partnership-digital-banking-450x270.jpg 450w" sizes="(max-width: 300px) 100vw, 300px" /> <img width="80" height="80" src="https://securecdn.pymnts.com/wp-content/uploads/2019/11/google-citi-partnership-digital-banking-80x80.jpg" class="mob-img wp-post-image" alt="Why Google/Citi Isn’t About Becoming A Bank" srcset="https://securecdn.pymnts.com/wp-content/uploads/2019/11/google-citi-partnership-digital-banking-80x80.jpg 80w, https://securecdn.pymnts.com/wp-content/uploads/2019/11/google-citi-partnership-digital-banking-550x550.jpg 550w, https://securecdn.pymnts.com/wp-content/uploads/2019/11/google-citi-partnership-digital-banking-470x470.jpg 470w" sizes="(max-width: 80px) 100vw, 80px" /><div class="feat-info-wrap"><div class="feat-info-views"> <i class="fa fa-eye fa-2"></i> <span class="feat-info-text">6.4K</span></div></div><div class="feat-vid-but"> <i class="fa fa-play fa-3"></i></div></div><div class="feat-widget-text"> <span class="side-list-cat">Payments Innovation</span><h2>Why Google’s Deal With Citi Isn’t About Becoming A Bank (But Is Still A Big Deal)</h2></div> </a></div><div class="feat-widget-wrap left relative"> <a href="https://www.pymnts.com/blockchain/bitcoin/2019/bitcoin-daily-shanghai-govt-ordered-to-launch-crypto-investigation-ripplenet-enables-vietnam-japan-money-transfers/"><div class="feat-widget-img left relative"> <img width="300" height="180" src="https://securecdn.pymnts.com/wp-content/uploads/2019/10/bitcoin-Philadelphia-Federal-Reserve-300x180.jpg" class="reg-img wp-post-image" alt="Bitcoin Daily: BankLine Aids Crypto Banking" srcset="https://securecdn.pymnts.com/wp-content/uploads/2019/10/bitcoin-Philadelphia-Federal-Reserve-300x180.jpg 300w, https://securecdn.pymnts.com/wp-content/uploads/2019/10/bitcoin-Philadelphia-Federal-Reserve-450x270.jpg 450w" sizes="(max-width: 300px) 100vw, 300px" /> <img width="80" height="80" src="https://securecdn.pymnts.com/wp-content/uploads/2019/10/bitcoin-Philadelphia-Federal-Reserve-80x80.jpg" class="mob-img wp-post-image" alt="Bitcoin Daily: BankLine Aids Crypto Banking" srcset="https://securecdn.pymnts.com/wp-content/uploads/2019/10/bitcoin-Philadelphia-Federal-Reserve-80x80.jpg 80w, https://securecdn.pymnts.com/wp-content/uploads/2019/10/bitcoin-Philadelphia-Federal-Reserve-470x470.jpg 470w" sizes="(max-width: 80px) 100vw, 80px" /><div class="feat-info-wrap"><div class="feat-info-views"> <i class="fa fa-eye fa-2"></i> <span class="feat-info-text">5.2K</span></div></div></div><div class="feat-widget-text"> <span class="side-list-cat">Bitcoin</span><h2>Bitcoin Daily: Shanghai Gov’t Ordered To Launch Crypto Investigation; RippleNet Enables Vietnam-Japan Money Transfers</h2></div> </a></div><div class="feat-widget-wrap left relative"> <a href="https://www.pymnts.com/news/faster-payments/2019/how-faster-underwriting-credit-analysis-unlock-faster-loan-payments/"><div class="feat-widget-img left relative"> <img width="300" height="180" src="https://securecdn.pymnts.com/wp-content/uploads/2019/11/lending-smartphone-credit-300x180.jpg" class="reg-img wp-post-image" alt="How Faster Underwriting Unlocks Faster Loans" srcset="https://securecdn.pymnts.com/wp-content/uploads/2019/11/lending-smartphone-credit-300x180.jpg 300w, https://securecdn.pymnts.com/wp-content/uploads/2019/11/lending-smartphone-credit-1000x600.jpg 1000w, https://securecdn.pymnts.com/wp-content/uploads/2019/11/lending-smartphone-credit-450x270.jpg 450w" sizes="(max-width: 300px) 100vw, 300px" /> <img width="80" height="80" src="https://securecdn.pymnts.com/wp-content/uploads/2019/11/lending-smartphone-credit-80x80.jpg" class="mob-img wp-post-image" alt="How Faster Underwriting Unlocks Faster Loans" srcset="https://securecdn.pymnts.com/wp-content/uploads/2019/11/lending-smartphone-credit-80x80.jpg 80w, https://securecdn.pymnts.com/wp-content/uploads/2019/11/lending-smartphone-credit-550x550.jpg 550w, https://securecdn.pymnts.com/wp-content/uploads/2019/11/lending-smartphone-credit-470x470.jpg 470w" sizes="(max-width: 80px) 100vw, 80px" /><div class="feat-info-wrap"><div class="feat-info-views"> <i class="fa fa-eye fa-2"></i> <span class="feat-info-text">3.9K</span></div></div></div><div class="feat-widget-text"> <span class="side-list-cat">Faster Payments</span><h2>How Faster Underwriting, Credit Analysis Unlock Faster Loan Payments</h2></div> </a></div><div class="feat-widget-wrap left relative"> <a href="https://www.pymnts.com/news/payment-methods/2019/amex-offers-big-cash-incentives-to-businesses/"><div class="feat-widget-img left relative"> <img width="300" height="180" src="https://securecdn.pymnts.com/wp-content/uploads/2019/11/AmEx-Fees-Cards-Acceptance-300x180.jpg" class="reg-img wp-post-image" alt="Amex Offers Cash Incentives To Attract Merchants" srcset="https://securecdn.pymnts.com/wp-content/uploads/2019/11/AmEx-Fees-Cards-Acceptance-300x180.jpg 300w, https://securecdn.pymnts.com/wp-content/uploads/2019/11/AmEx-Fees-Cards-Acceptance-1000x600.jpg 1000w, https://securecdn.pymnts.com/wp-content/uploads/2019/11/AmEx-Fees-Cards-Acceptance-450x270.jpg 450w" sizes="(max-width: 300px) 100vw, 300px" /> <img width="80" height="80" src="https://securecdn.pymnts.com/wp-content/uploads/2019/11/AmEx-Fees-Cards-Acceptance-80x80.jpg" class="mob-img wp-post-image" alt="Amex Offers Cash Incentives To Attract Merchants" srcset="https://securecdn.pymnts.com/wp-content/uploads/2019/11/AmEx-Fees-Cards-Acceptance-80x80.jpg 80w, https://securecdn.pymnts.com/wp-content/uploads/2019/11/AmEx-Fees-Cards-Acceptance-550x550.jpg 550w, https://securecdn.pymnts.com/wp-content/uploads/2019/11/AmEx-Fees-Cards-Acceptance-470x470.jpg 470w" sizes="(max-width: 80px) 100vw, 80px" /><div class="feat-info-wrap"><div class="feat-info-views"> <i class="fa fa-eye fa-2"></i> <span class="feat-info-text">3.4K</span></div></div><div class="feat-vid-but"> <i class="fa fa-play fa-3"></i></div></div><div class="feat-widget-text"> <span class="side-list-cat">Payment Methods</span><h2>Amex Offers Big Cash Incentives To Businesses To Boost Acceptance</h2></div> </a></div><div class="feat-widget-wrap left relative"> <a href="https://www.pymnts.com/news/ridesharing/2019/gett-closes-ny-ridesharing-brand-juno-partners-with-lyft/"><div class="feat-widget-img left relative"> <img width="300" height="180" src="https://securecdn.pymnts.com/wp-content/uploads/2019/11/Gett-Juno-Lyft-New-York-City-IPO-300x180.jpg" class="reg-img wp-post-image" alt="Gett taxi" srcset="https://securecdn.pymnts.com/wp-content/uploads/2019/11/Gett-Juno-Lyft-New-York-City-IPO-300x180.jpg 300w, https://securecdn.pymnts.com/wp-content/uploads/2019/11/Gett-Juno-Lyft-New-York-City-IPO-258x155.jpg 258w, https://securecdn.pymnts.com/wp-content/uploads/2019/11/Gett-Juno-Lyft-New-York-City-IPO-768x461.jpg 768w, https://securecdn.pymnts.com/wp-content/uploads/2019/11/Gett-Juno-Lyft-New-York-City-IPO-457x274.jpg 457w, https://securecdn.pymnts.com/wp-content/uploads/2019/11/Gett-Juno-Lyft-New-York-City-IPO-450x270.jpg 450w, https://securecdn.pymnts.com/wp-content/uploads/2019/11/Gett-Juno-Lyft-New-York-City-IPO.jpg 1000w" sizes="(max-width: 300px) 100vw, 300px" /> <img width="80" height="80" src="https://securecdn.pymnts.com/wp-content/uploads/2019/11/Gett-Juno-Lyft-New-York-City-IPO-80x80.jpg" class="mob-img wp-post-image" alt="Gett taxi" srcset="https://securecdn.pymnts.com/wp-content/uploads/2019/11/Gett-Juno-Lyft-New-York-City-IPO-80x80.jpg 80w, https://securecdn.pymnts.com/wp-content/uploads/2019/11/Gett-Juno-Lyft-New-York-City-IPO-550x550.jpg 550w, https://securecdn.pymnts.com/wp-content/uploads/2019/11/Gett-Juno-Lyft-New-York-City-IPO-470x470.jpg 470w" sizes="(max-width: 80px) 100vw, 80px" /><div class="feat-info-wrap"><div class="feat-info-views"> <i class="fa fa-eye fa-2"></i> <span class="feat-info-text">3.3K</span></div></div></div><div class="feat-widget-text"> <span class="side-list-cat">Ridesharing</span><h2>Gett Closes Down NY Ridesharing Brand Juno; Partners With Lyft</h2></div> </a></div><div class="feat-widget-wrap left relative"> <a href="https://www.pymnts.com/news/partnerships-acquisitions/2019/elavon-spends-300m-for-sage-pay/"><div class="feat-widget-img left relative"> <img width="300" height="180" src="https://securecdn.pymnts.com/wp-content/uploads/2019/11/bancorp-Elavon-Sage-Pay-Sage-Group-payments-merchant-acquirer-UK-Ireland-news-300x180.jpg" class="reg-img wp-post-image" alt="bancorp, Elavon, Sage Pay, Sage Group, payments, merchant acquirer, UJ, Ireland, news" srcset="https://securecdn.pymnts.com/wp-content/uploads/2019/11/bancorp-Elavon-Sage-Pay-Sage-Group-payments-merchant-acquirer-UK-Ireland-news-300x180.jpg 300w, https://securecdn.pymnts.com/wp-content/uploads/2019/11/bancorp-Elavon-Sage-Pay-Sage-Group-payments-merchant-acquirer-UK-Ireland-news-450x270.jpg 450w" sizes="(max-width: 300px) 100vw, 300px" /> <img width="80" height="80" src="https://securecdn.pymnts.com/wp-content/uploads/2019/11/bancorp-Elavon-Sage-Pay-Sage-Group-payments-merchant-acquirer-UK-Ireland-news-80x80.jpg" class="mob-img wp-post-image" alt="bancorp, Elavon, Sage Pay, Sage Group, payments, merchant acquirer, UJ, Ireland, news" /><div class="feat-info-wrap"><div class="feat-info-views"> <i class="fa fa-eye fa-2"></i> <span class="feat-info-text">3.1K</span></div></div><div class="feat-vid-but"> <i class="fa fa-play fa-3"></i></div></div><div class="feat-widget-text"> <span class="side-list-cat">Partnerships / Acquisitions</span><h2>Elavon Spends $300M For Sage Pay</h2></div> </a></div><div class="feat-widget-wrap left relative"> <a href="https://www.pymnts.com/news/faster-payments/2019/hsbc-launches-real-time-payments-for-businesses/"><div class="feat-widget-img left relative"> <img width="300" height="180" src="https://securecdn.pymnts.com/wp-content/uploads/2019/11/HSBC-RTP-network-real-time-payments-the-clearing-house-businesses-news--300x180.jpg" class="reg-img wp-post-image" alt="HSBC, RTP network, real-time payments, the clearing house, businesses, news" srcset="https://securecdn.pymnts.com/wp-content/uploads/2019/11/HSBC-RTP-network-real-time-payments-the-clearing-house-businesses-news--300x180.jpg 300w, https://securecdn.pymnts.com/wp-content/uploads/2019/11/HSBC-RTP-network-real-time-payments-the-clearing-house-businesses-news--450x270.jpg 450w" sizes="(max-width: 300px) 100vw, 300px" /> <img width="80" height="80" src="https://securecdn.pymnts.com/wp-content/uploads/2019/11/HSBC-RTP-network-real-time-payments-the-clearing-house-businesses-news--80x80.jpg" class="mob-img wp-post-image" alt="HSBC, RTP network, real-time payments, the clearing house, businesses, news" /><div class="feat-info-wrap"><div class="feat-info-views"> <i class="fa fa-eye fa-2"></i> <span class="feat-info-text">2.8K</span></div></div></div><div class="feat-widget-text"> <span class="side-list-cat">Faster Payments</span><h2>HSBC Launches Real-Time Payments For Businesses</h2></div> </a></div><div class="feat-widget-wrap left relative"> <a href="https://www.pymnts.com/blockchain/2019/germany-hahn-air-introduces-blockchain-powered-tickets/"><div class="feat-widget-img left relative"> <img width="300" height="180" src="https://securecdn.pymnts.com/wp-content/uploads/2019/11/Hahn-Air-Germany-Blockchain-300x180.jpg" class="reg-img wp-post-image" alt="Germany’s Hahn Air Is First To Use Blockchain-Powered Tickets" srcset="https://securecdn.pymnts.com/wp-content/uploads/2019/11/Hahn-Air-Germany-Blockchain-300x180.jpg 300w, https://securecdn.pymnts.com/wp-content/uploads/2019/11/Hahn-Air-Germany-Blockchain-1000x600.jpg 1000w, https://securecdn.pymnts.com/wp-content/uploads/2019/11/Hahn-Air-Germany-Blockchain-450x270.jpg 450w" sizes="(max-width: 300px) 100vw, 300px" /> <img width="80" height="80" src="https://securecdn.pymnts.com/wp-content/uploads/2019/11/Hahn-Air-Germany-Blockchain-80x80.jpg" class="mob-img wp-post-image" alt="Germany’s Hahn Air Is First To Use Blockchain-Powered Tickets" srcset="https://securecdn.pymnts.com/wp-content/uploads/2019/11/Hahn-Air-Germany-Blockchain-80x80.jpg 80w, https://securecdn.pymnts.com/wp-content/uploads/2019/11/Hahn-Air-Germany-Blockchain-550x550.jpg 550w, https://securecdn.pymnts.com/wp-content/uploads/2019/11/Hahn-Air-Germany-Blockchain-470x470.jpg 470w" sizes="(max-width: 80px) 100vw, 80px" /><div class="feat-info-wrap"><div class="feat-info-views"> <i class="fa fa-eye fa-2"></i> <span class="feat-info-text">2.6K</span></div></div></div><div class="feat-widget-text"> <span class="side-list-cat">Blockchain</span><h2>Germany’s Hahn Air Introduces Blockchain-Powered Tickets</h2></div> </a></div><div class="feat-widget-wrap left relative"> <a href="https://www.pymnts.com/news/retail/2019/macys-hacked-in-magecart-attack/"><div class="feat-widget-img left relative"> <img width="300" height="180" src="https://securecdn.pymnts.com/wp-content/uploads/2019/11/macy-magecart-cybersecurity-retail-eCommerce-300x180.jpg" class="reg-img wp-post-image" alt="Macy&#039;s Hacked In Magecart Attack" srcset="https://securecdn.pymnts.com/wp-content/uploads/2019/11/macy-magecart-cybersecurity-retail-eCommerce-300x180.jpg 300w, https://securecdn.pymnts.com/wp-content/uploads/2019/11/macy-magecart-cybersecurity-retail-eCommerce-1000x600.jpg 1000w, https://securecdn.pymnts.com/wp-content/uploads/2019/11/macy-magecart-cybersecurity-retail-eCommerce-450x270.jpg 450w" sizes="(max-width: 300px) 100vw, 300px" /> <img width="80" height="80" src="https://securecdn.pymnts.com/wp-content/uploads/2019/11/macy-magecart-cybersecurity-retail-eCommerce-80x80.jpg" class="mob-img wp-post-image" alt="Macy&#039;s Hacked In Magecart Attack" srcset="https://securecdn.pymnts.com/wp-content/uploads/2019/11/macy-magecart-cybersecurity-retail-eCommerce-80x80.jpg 80w, https://securecdn.pymnts.com/wp-content/uploads/2019/11/macy-magecart-cybersecurity-retail-eCommerce-550x550.jpg 550w, https://securecdn.pymnts.com/wp-content/uploads/2019/11/macy-magecart-cybersecurity-retail-eCommerce-470x470.jpg 470w" sizes="(max-width: 80px) 100vw, 80px" /><div class="feat-info-wrap"><div class="feat-info-views"> <i class="fa fa-eye fa-2"></i> <span class="feat-info-text">2.6K</span></div></div></div><div class="feat-widget-text"> <span class="side-list-cat">Retail</span><h2>Macy&#8217;s Hacked In Magecart Attack</h2></div> </a></div><div class="feat-widget-wrap left relative"> <a href="https://www.pymnts.com/news/b2b-payments/2019/wells-corporate-customers-can-now-send-payments-via-rtp-network/"><div class="feat-widget-img left relative"> <img width="300" height="180" src="https://securecdn.pymnts.com/wp-content/uploads/2019/11/wells-fargo-real-time-payments-rtp-network-the-clearing-house-b2b-corporate-news-300x180.jpg" class="reg-img wp-post-image" alt="Wells Fargo" srcset="https://securecdn.pymnts.com/wp-content/uploads/2019/11/wells-fargo-real-time-payments-rtp-network-the-clearing-house-b2b-corporate-news-300x180.jpg 300w, https://securecdn.pymnts.com/wp-content/uploads/2019/11/wells-fargo-real-time-payments-rtp-network-the-clearing-house-b2b-corporate-news-450x270.jpg 450w" sizes="(max-width: 300px) 100vw, 300px" /> <img width="80" height="80" src="https://securecdn.pymnts.com/wp-content/uploads/2019/11/wells-fargo-real-time-payments-rtp-network-the-clearing-house-b2b-corporate-news-80x80.jpg" class="mob-img wp-post-image" alt="Wells Fargo" /><div class="feat-info-wrap"><div class="feat-info-views"> <i class="fa fa-eye fa-2"></i> <span class="feat-info-text">2.6K</span></div></div></div><div class="feat-widget-text"> <span class="side-list-cat">B2B Payments</span><h2>Wells Corporate Customers Can Now Send Immediate Payments Via RTP Network</h2></div> </a></div><div class="feat-widget-wrap left relative"> <a href="https://www.pymnts.com/news/retail/2019/magic-mirror-on-the-wall-is-ar-the-innovation-for-retailers-all/"><div class="feat-widget-img left relative"> <img width="300" height="180" src="https://securecdn.pymnts.com/wp-content/uploads/2019/11/MemoMi-retail-digital-mirror-AR-300x180.jpg" class="reg-img wp-post-image" alt="fashion smartphone dressing room" srcset="https://securecdn.pymnts.com/wp-content/uploads/2019/11/MemoMi-retail-digital-mirror-AR-300x180.jpg 300w, https://securecdn.pymnts.com/wp-content/uploads/2019/11/MemoMi-retail-digital-mirror-AR-1000x600.jpg 1000w, https://securecdn.pymnts.com/wp-content/uploads/2019/11/MemoMi-retail-digital-mirror-AR-450x270.jpg 450w" sizes="(max-width: 300px) 100vw, 300px" /> <img width="80" height="80" src="https://securecdn.pymnts.com/wp-content/uploads/2019/11/MemoMi-retail-digital-mirror-AR-80x80.jpg" class="mob-img wp-post-image" alt="fashion smartphone dressing room" srcset="https://securecdn.pymnts.com/wp-content/uploads/2019/11/MemoMi-retail-digital-mirror-AR-80x80.jpg 80w, https://securecdn.pymnts.com/wp-content/uploads/2019/11/MemoMi-retail-digital-mirror-AR-1472x1472.jpg 1472w, https://securecdn.pymnts.com/wp-content/uploads/2019/11/MemoMi-retail-digital-mirror-AR-1104x1104.jpg 1104w, https://securecdn.pymnts.com/wp-content/uploads/2019/11/MemoMi-retail-digital-mirror-AR-912x912.jpg 912w, https://securecdn.pymnts.com/wp-content/uploads/2019/11/MemoMi-retail-digital-mirror-AR-550x550.jpg 550w, https://securecdn.pymnts.com/wp-content/uploads/2019/11/MemoMi-retail-digital-mirror-AR-470x470.jpg 470w" sizes="(max-width: 80px) 100vw, 80px" /><div class="feat-info-wrap"><div class="feat-info-views"> <i class="fa fa-eye fa-2"></i> <span class="feat-info-text">2.3K</span></div></div></div><div class="feat-widget-text"> <span class="side-list-cat">Retail</span><h2>Magic Mirror On The Wall, Is AR The Innovation For Retailers All?</h2></div> </a></div><div class="feat-widget-wrap left relative"> <a href="https://www.pymnts.com/news/payments-innovation/2019/the-great-credit-card-program-outsourcing-debate/"><div class="feat-widget-img left relative"> <img width="300" height="180" src="https://securecdn.pymnts.com/wp-content/uploads/2019/11/elan-financial-services-payment-cards-300x180.jpg" class="reg-img wp-post-image" alt="How FIs Build Successful Payment Card Programs" srcset="https://securecdn.pymnts.com/wp-content/uploads/2019/11/elan-financial-services-payment-cards-300x180.jpg 300w, https://securecdn.pymnts.com/wp-content/uploads/2019/11/elan-financial-services-payment-cards-1000x600.jpg 1000w, https://securecdn.pymnts.com/wp-content/uploads/2019/11/elan-financial-services-payment-cards-450x270.jpg 450w" sizes="(max-width: 300px) 100vw, 300px" /> <img width="80" height="80" src="https://securecdn.pymnts.com/wp-content/uploads/2019/11/elan-financial-services-payment-cards-80x80.jpg" class="mob-img wp-post-image" alt="How FIs Build Successful Payment Card Programs" srcset="https://securecdn.pymnts.com/wp-content/uploads/2019/11/elan-financial-services-payment-cards-80x80.jpg 80w, https://securecdn.pymnts.com/wp-content/uploads/2019/11/elan-financial-services-payment-cards-550x550.jpg 550w, https://securecdn.pymnts.com/wp-content/uploads/2019/11/elan-financial-services-payment-cards-470x470.jpg 470w" sizes="(max-width: 80px) 100vw, 80px" /><div class="feat-info-wrap"><div class="feat-info-views"> <i class="fa fa-eye fa-2"></i> <span class="feat-info-text">2.3K</span></div></div></div><div class="feat-widget-text"> <span class="side-list-cat">Payments Innovation</span><h2>The Great Credit Card Program Outsourcing Debate</h2></div> </a></div><div class="feat-widget-wrap left relative"> <a href="https://www.pymnts.com/news/retail/2019/creating-coffee-good-enough-to-eat/"><div class="feat-widget-img left relative"> <img width="300" height="180" src="https://securecdn.pymnts.com/wp-content/uploads/2019/11/eatyourcoffee-johnnyfayad-food-subscriptions-ecommerce-300x180.jpg" class="reg-img wp-post-image" alt="Caffeinating Workouts (And The Workday) With Coffee Energy Bars" srcset="https://securecdn.pymnts.com/wp-content/uploads/2019/11/eatyourcoffee-johnnyfayad-food-subscriptions-ecommerce-300x180.jpg 300w, https://securecdn.pymnts.com/wp-content/uploads/2019/11/eatyourcoffee-johnnyfayad-food-subscriptions-ecommerce-1000x600.jpg 1000w, https://securecdn.pymnts.com/wp-content/uploads/2019/11/eatyourcoffee-johnnyfayad-food-subscriptions-ecommerce-450x270.jpg 450w" sizes="(max-width: 300px) 100vw, 300px" /> <img width="80" height="80" src="https://securecdn.pymnts.com/wp-content/uploads/2019/11/eatyourcoffee-johnnyfayad-food-subscriptions-ecommerce-80x80.jpg" class="mob-img wp-post-image" alt="Caffeinating Workouts (And The Workday) With Coffee Energy Bars" srcset="https://securecdn.pymnts.com/wp-content/uploads/2019/11/eatyourcoffee-johnnyfayad-food-subscriptions-ecommerce-80x80.jpg 80w, https://securecdn.pymnts.com/wp-content/uploads/2019/11/eatyourcoffee-johnnyfayad-food-subscriptions-ecommerce-550x550.jpg 550w, https://securecdn.pymnts.com/wp-content/uploads/2019/11/eatyourcoffee-johnnyfayad-food-subscriptions-ecommerce-470x470.jpg 470w" sizes="(max-width: 80px) 100vw, 80px" /><div class="feat-info-wrap"><div class="feat-info-views"> <i class="fa fa-eye fa-2"></i> <span class="feat-info-text">2.2K</span></div></div></div><div class="feat-widget-text"> <span class="side-list-cat">Retail</span><h2>Creating Coffee Good Enough To Eat</h2></div> </a></div><div class="feat-widget-wrap left relative"> <a href="https://www.pymnts.com/news/digital-banking/2019/scotiabank-slow-but-steady-wins-the-ai-fraud-race/"><div class="feat-widget-img left relative"> <img width="300" height="180" src="https://securecdn.pymnts.com/wp-content/uploads/2019/11/fraud-protection-banking-300x180.jpg" class="reg-img wp-post-image" alt="" srcset="https://securecdn.pymnts.com/wp-content/uploads/2019/11/fraud-protection-banking-300x180.jpg 300w, https://securecdn.pymnts.com/wp-content/uploads/2019/11/fraud-protection-banking-1000x600.jpg 1000w, https://securecdn.pymnts.com/wp-content/uploads/2019/11/fraud-protection-banking-450x270.jpg 450w" sizes="(max-width: 300px) 100vw, 300px" /> <img width="80" height="80" src="https://securecdn.pymnts.com/wp-content/uploads/2019/11/fraud-protection-banking-80x80.jpg" class="mob-img wp-post-image" alt="" srcset="https://securecdn.pymnts.com/wp-content/uploads/2019/11/fraud-protection-banking-80x80.jpg 80w, https://securecdn.pymnts.com/wp-content/uploads/2019/11/fraud-protection-banking-1472x1472.jpg 1472w, https://securecdn.pymnts.com/wp-content/uploads/2019/11/fraud-protection-banking-1104x1104.jpg 1104w, https://securecdn.pymnts.com/wp-content/uploads/2019/11/fraud-protection-banking-912x912.jpg 912w, https://securecdn.pymnts.com/wp-content/uploads/2019/11/fraud-protection-banking-550x550.jpg 550w, https://securecdn.pymnts.com/wp-content/uploads/2019/11/fraud-protection-banking-470x470.jpg 470w" sizes="(max-width: 80px) 100vw, 80px" /><div class="feat-info-wrap"><div class="feat-info-views"> <i class="fa fa-eye fa-2"></i> <span class="feat-info-text">2.2K</span></div></div></div><div class="feat-widget-text"> <span class="side-list-cat">Digital Banking</span><h2>Scotiabank: Slow But Steady Wins The AI Fraud Race</h2></div> </a></div></div></div></div></div></div></div></div></div><footer id="foot-wrap" class="left relative"><div id="foot-top-wrap" class="left relative"><div class="body-main-out relative"><div class="body-main-in"><div id="foot-widget-wrap" class="left relative"></div><div class="slbd-wrap left relative"><div class="footer-mega-col"><div class="footer-mega-col-wrap"><aside id="pods_widget_list-3" class="widget fmgc-columns widget-count-5 fmgc-per-row-5c pods_widget_list"><h6 class="widget-title">FEATURED STUDIES</h6><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/study/ai-gap-study-june-2019/">AI Innovation</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/study/the-b2b-payments-tipping-point-playbook-study/">B2B PAYMENTS TIPPING POINT</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/study/buy-button-index-july-2019/">Buy Button</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/study/checkout-conversion-index-may-2019/">Checkout Conversion Index</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/study/commerce-connected-playbook-august-2019/">Commerce Connected</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/study/connected-consumer-playbook-study/">Connected Consumer</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/study/consumer-centric-authentication-november-2019/">Consumer-Centric Authentication</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/study/credit-union-innovation-playbook-july-2019/">Credit Union Innovation</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/study/digital-consumer-study/">DIGITAL CONSUMER</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/study/digital-drive-study/">Digital Drive</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/study/digital-identity-lifestyle-capsule-march-2019/">DIGITAL IDENTITY LIFESTYLE CAPSULE</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/study/disbursement-satisfaction-report-october-2019/">Disbursement Satisfaction</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/study/enterprise-retail-grocery-study/">ENTERPRISE RETAIL GROCERY</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/study/financial-invisibles-february-2019/">Financial Invisibles Report</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/study/gig-economy-april-2019/">Gig Economy</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/study/global-cash-study/">GLOBAL CASH</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/study/global-fraud-study/">GLOBAL FRAUD</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/study/global-payments-innovation-study/">Global Payments Innovation</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/study/healthcare-payments-study/">HEALTHCARE PAYMENTS</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/study/how-consumers-pay-for-elective-medical-procedures-report/">How Consumers Pay For Elective Medical Procedures</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/study/how-we-will-pay-2019/">HOW WE WILL PAY</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/study/innovation-readiness-playbook-building-the-technological-foundation-for-innovation/">Innovation Readiness</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/study/just-tap-to-pay-brief-october-2019/">Just Tap To Pay</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/study/kiosk-and-retail-study/">Kiosk and Retail</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/study/luxury-travel-study-september-2019/">Luxury Travel</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/study/making-instant-pay-global-playbook/">Making Instant Pay Global</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/study/mobile-card-services-july-2019/">Mobile Card Services</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/study/omni-security-and-authentication-study/">Omni Security and Authentication</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/study/omni-usage-index-study/">OMNI USAGE</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/study/pay-advances-breaking-the-paycheck-to-paycheck-cycle/">Pay Advances</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/study/payables-friction-playbook-september-2019/">Payables Friction</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/study/paying-at-the-pump-study/">PAYING AT THE PUMP</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/study/payments-2022-study-june-2019/">Payments 2022</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/study/payments-and-the-platform-economy-november-2019/">Payments And The Platform Economy</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/study/remote-payments-study-2/">Remote Payments</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/study/restaurant-readiness-study/">RESTAURANT READINESS</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/study/retail-innovation-readiness-index-may-2019/">Retail Innovation Readiness</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/study/simplifying-cross-border-payments/">Simplifying Cross-Border Payments</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/study/subscription-commerce-november-2019/">Subscription Commerce Conversion Index</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/study/the-just-connect-to-pay-brief-november-2019/">Just Connect To Pay</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/study/the-just-say-to-pay-brief/">Just Say To Pay</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/study/the-sca-impact-playbook-subscription-commerce-and-the-sca-opportunity/">SCA Impact</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/study/the-smb-receivables-gap-playbook-november-2019/">SMB Receivables Gap</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/study/travel-payments-july-study/">TRAVEL PAYMENTS</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/study/tuition-payments-study-july-2019/">Tuition Payments</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/study/virtual-reality-in-retail-study/">VIRTUAL REALITY IN RETAIL</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/study/where-will-we-bank-next-april-2019/">Where Will We Bank Next?</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/study/which-apps-do-they-want/">Which Apps Do They Want?</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/study/who-are-you-verifying-digital-identity-in-the-sharing-economy/">Who Are You? Verifying Digital Identity In The Sharing Economy</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/study/x-border-payments-optimization-study/">X-BORDER PAYMENTS OPTIMIZATION</a></span></h5><br></aside><aside id="pods_widget_list-2" class="widget fmgc-columns widget-count-5 fmgc-per-row-5c pods_widget_list"><h6 class="widget-title">MONTHLY TRACKERS®</h6><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/tracker/accounts-receivable-automation/">Accounts Receivable Automation</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/tracker/aml-kyc-november-2019/">AML/KYC</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/tracker/automated-retail-august-2019/">Automated Retail</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/tracker/b2b-api-april-2019-tracker/">B2B API</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/tracker/call-center-commerce-september-2019/">Call Center Commerce</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/tracker/credit-union-october-2019/">Credit Union</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/tracker/digital-banking-november-2019/">Digital Banking</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/tracker/digital-consumer-onboarding-april-2019/">DIGITAL CONSUMER ONBOARDING</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/tracker/digital-fraud-october-2019/">Digital Fraud</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/tracker/digital-identity-november-2019/">Digital Identity</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/tracker/digital-first-banking-november-2019/">Digital-First Banking</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/tracker/disbursements-tracker-november-2019/">Disbursements</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/tracker/faster-payments-november-2019/">Faster Payments</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/tracker/fraud-decisioning-playbook-october-2019/">Fraud Decisioning</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/tracker/global-recurring-payments-october-november/">Global Recurring Payments</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/tracker/intelligence-of-things-november-2019/">Intelligence of Things</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/tracker/mobile-order-ahead-november-2019/">Mobile Order-Ahead</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/tracker/mpos-july-2019/">mPOS</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/tracker/next-gen-ap-automation-september-2019/">Next-Gen AP Automation</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/tracker/next-gen-sales-tax-october-2019/">Next-Gen Sales Tax</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/tracker/order-to-eat-november-2019/">Order To Eat</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/tracker/psd2-tracker-november-2019/">PSD2</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/tracker/smarter-payments-august-2019/">Smarter Payments</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/tracker/subscription-commerce-november-2019/">Subscription Commerce</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="https://www.pymnts.com/tracker/workforce-spend-playbook-october-2019/">Workforce Spend Playbook</a></span></h5><br></aside><aside id="text-7" class="widget fmgc-columns widget-count-5 fmgc-per-row-5c widget_text"><div class="textwidget"><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="/today-on-pymnts/">NEWS</a></span></h5><hr><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="/today-on-pymnts/">Today's News</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="/tag/editors-picks/">Editor’s Picks</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="/retail/">Retail</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="/b2b/">B2B</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="/author/karen-webster/">Opinion</a></span></h5><br> <br> <br></div></aside><aside id="text-10" class="widget fmgc-columns widget-count-5 fmgc-per-row-5c widget_text"><div class="textwidget"><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="/masterclass/">VIDEOS</a></span></h5><hr><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="/masterclass/">Masterclass</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="/payology/">Payology</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="/videos/">News</a></span></h5><br> <br> <br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="/podcasts/">PODCASTS</a></span></h5><hr> <br> <br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="/subscribe/">SUBSCRIBE</a></span></h5><hr><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="/subscribe/">Main</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="/subscribe/">B2B</a></span></h5><br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="/subscribe/">Retail</a></span></h5><br> <br><h5><span style="color: #ffffff;"><a style="color: #ffffff;" href="/partnerships/">PARTNERSHIPS</a></span></h5><hr> <br> <br> <br></div></aside><aside id="text-12" class="widget fmgc-columns widget-count-5 fmgc-per-row-5c widget_text"><div class="textwidget"><p><img class="alignnone size-full wp-image-440622" src="https://securecdn.pymnts.com/wp-content/uploads/2017/12/PYMNTS-logo-white_padding.png" alt="" width="800" height="152" /></p></div></aside></div></div></div></div></div></div><div id="foot-bot-wrap" class="left relative"><div class="body-main-out relative"><div class="body-main-in"><div id="foot-bot" class="left relative"><div class="foot-menu relative"><div class="menu-footer-container"><ul id="menu-footer" class="menu"><li id="menu-item-581784" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-581784"><a href="https://www.pymnts.com/subscribe/">Subscribe</a></li><li id="menu-item-52090" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-52090"><a href="https://www.pymnts.com/about/">About</a></li><li id="menu-item-386137" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-386137"><a href="https://www.pymnts.com/partnerships/">Work With Us</a></li><li id="menu-item-52168" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-52168"><a href="https://www.pymnts.com/terms-conditions/">Terms &#038; Conditions</a></li><li id="menu-item-720119" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-720119"><a href="https://www.pymnts.com/privacy-policy/">Privacy Policy</a></li><li id="menu-item-52169" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-52169"><a href="https://www.pymnts.com/contact-us/">Contact</a></li></ul></div></div><div class="foot-copy relative"><p>© 2019 What’s Next Media and Analytics</p></div></div></div></div></div></footer></div></div></div><div class="previous-article hidden"> <i class="fa fa-angle-up fa-3 previous-article-icon"></i></div><div class="next-article top-radius hidden"> <i class="fa fa-angle-down fa-3 next-article-icon"></i></div> <script type="text/javascript">jQuery(document).ready(function () {
+				jQuery("#post-right-col,#post-sidebar-wrap,.home-mid-col,.home-right-col,#arch-right-col").theiaStickySidebar({"containerSelector":"","additionalMarginTop":"65","additionalMarginBottom":"15","updateSidebarHeight":false,"minWidth":"767","sidebarBehavior":"modern"});
+			});</script> <script type="text/javascript">jQuery(document).ready(function($) {
+
+	// Back to Top Button
+    	var duration = 500;
+    	$('.back-to-top').click(function(event) {
+          event.preventDefault();
+          $('html, body').animate({scrollTop: 0}, duration);
+          return false;
+	});
+
+	// Main Menu Dropdown Toggle
+	$('.menu-item-has-children a').click(function(event){
+	  event.stopPropagation();
+	  location.href = this.href;
+  	});
+
+	$('.menu-item-has-children').click(function(){
+    	  $(this).addClass('toggled');
+    	  if($('.menu-item-has-children').hasClass('toggled'))
+    	  {
+    	  $(this).children('ul').toggle();
+	  $('.fly-nav-menu').getNiceScroll().resize();
+	  }
+	  $(this).toggleClass('tog-minus');
+    	  return false;
+  	});
+
+	// Main Menu Scroll
+	$(window).load(function(){
+	  $('.fly-nav-menu').niceScroll({cursorcolor:"#888",cursorwidth: 7,cursorborder: 0,zindex:999999});
+	});
+
+
+  	// Comments Toggle
+	  	$(".comment-click-572020").on("click", function(){
+  	  $(".com-click-id-572020").show();
+	  $(".disqus-thread-572020").show();
+  	  $(".com-but-572020").hide();
+  	});
+	
+	// Infinite Scroll
+	$('.infinite-content').infinitescroll({
+	  navSelector: ".nav-links",
+	  nextSelector: ".nav-links a:first",
+	  itemSelector: ".infinite-post",
+	  loading: {
+		msgText: "Loading more posts...",
+		finishedMsg: "Sorry, no more posts"
+	  }
+	});
+	$(window).unbind('.infscr');
+	$(".inf-more-but").click(function(){
+   		$('.infinite-content').infinitescroll('retrieve');
+        	return false;
+	});
+
+$(window).load(function() {
+  // The slider being synced must be initialized first
+  $('.post-gallery-bot').flexslider({
+    animation: "slide",
+    controlNav: false,
+    animationLoop: true,
+    slideshow: false,
+    itemWidth: 80,
+    itemMargin: 10,
+    asNavFor: '.post-gallery-top'
+  });
+
+  $('.post-gallery-top').flexslider({
+    animation: "fade",
+    controlNav: false,
+    animationLoop: true,
+    slideshow: false,
+    	  prevText: "&lt;",
+          nextText: "&gt;",
+    sync: ".post-gallery-bot"
+  });
+});
+
+});</script> <script>jQuery(document).ready(function () {
+		jQuery.post('https://www.pymnts.com?ga_action=googleanalytics_get_script', {action: 'googleanalytics_get_script'}, function(response) {
+			var s = document.createElement("script");
+			s.type = "text/javascript";
+			s.innerHTML = response;
+			jQuery("head").append(s);
+		});
+    });</script><link rel='stylesheet' id='studio-fonts-css'  href='//fonts.googleapis.com/css?family=Oswald%3ALato%3A400%2C700%7CWork+Sans%3A900%7CMontserrat%3A400%2C700%7COpen+Sans%3A800%7CPlayfair+Display%3A400%2C700%2C900%7CQuicksand%7CRaleway%3A200%2C400%2C700%7CRoboto+Slab%3A400%2C700%26subset%3Dlatin%2Clatin-ext&#038;ver=1.0.0' type='text/css' media='all' /> <script type='text/javascript' src='https://securecdn.pymnts.com/wp-includes/js/comment-reply.min.js'></script> <script type='text/javascript'>var superpwa_sw = {"url":"\/superpwa-sw.js"};;;var wpcf7 = {"apiSettings":{"root":"https:\/\/www.pymnts.com\/wp-json\/contact-form-7\/v1","namespace":"contact-form-7\/v1"}};</script> <script type='text/javascript' src='https://securecdn.pymnts.com/wp-content/uploads/hummingbird-assets/717c9d9f719ab9be7995bbb4e32a266b.js'></script> <script type='text/javascript' src='https://securecdn.pymnts.com/wp-content/uploads/hummingbird-assets/742580ba8b8f944431c9a848379b18f3.js'></script> <script type='text/javascript' src='https://securecdn.pymnts.com/wp-content/uploads/hummingbird-assets/3fae26144ce4024f1d93e053063f883e.js'></script> <script type='text/javascript' src='https://securecdn.pymnts.com/wp-content/uploads/hummingbird-assets/9b58d42c49a4d67d48a72b75ee0708e5.js'></script> <script type='text/javascript' src='https://securecdn.pymnts.com/wp-content/uploads/hummingbird-assets/d95423e81c24d0f9e404cb580f30f2a5.js'></script> <script type='text/javascript' src='https://securecdn.pymnts.com/wp-content/themes/flex-mag/js/jquery.infinitescroll.min.js'></script> <script type='text/javascript' src='https://securecdn.pymnts.com/wp-content/uploads/hummingbird-assets/2e85f77bbaefb5676477ba6f3e1f56e5.js'></script> <script type='text/javascript'>var advadsGALocale = {"Impressions":"Impressions","Clicks":"Clicks"};;;var _EPYT_ = {"ajaxurl":"https:\/\/www.pymnts.com\/wp-admin\/admin-ajax.php","security":"526513be26","gallery_scrolloffset":"20","eppathtoscripts":"https:\/\/www.pymnts.com\/wp-content\/plugins\/youtube-embed-plus\/scripts\/","eppath":"https:\/\/www.pymnts.com\/wp-content\/plugins\/youtube-embed-plus\/","epresponsiveselector":"[\"iframe.__youtube_prefs__\"]","epdovol":"1","version":"13.1","evselector":"iframe.__youtube_prefs__[src], iframe[src*=\"youtube.com\/embed\/\"], iframe[src*=\"youtube-nocookie.com\/embed\/\"]","ajax_compat":"","ytapi_load":"light","stopMobileBuffer":"1","vi_active":"","vi_js_posttypes":[]};;;var advadsTracking = {"ajaxurl":"https:\/\/www.pymnts.com\/wp-admin\/admin-ajax.php?action=advanced-ads-tracking-track","method":"ga","blogId":"1"};;;var advanced_ads_pro_ajax_object = {"ajax_url":"https:\/\/www.pymnts.com\/wp-admin\/admin-ajax.php","lazy_load_module_enabled":"","lazy_load":{"default_offset":0,"offsets":[]}};</script> <script type='text/javascript' src='https://securecdn.pymnts.com/wp-content/uploads/hummingbird-assets/022d03a8f184419008eda51749a9d511.js'></script> <script type='text/javascript' src='https://securecdn.pymnts.com/wp-includes/js/jquery/jquery-migrate.min.js'></script> <!--noptimize--><script>window.advads_placement_tests = [];
+window.advads_passive_ads = {};
+window.advads_passive_groups = {};
+window.advads_passive_placements = {};
+window.advads_ajax_queries = [];
+window.advads_has_ads = [];
+window.advads_js_items = [];
+( window.advanced_ads_ready || jQuery( document ).ready ).call( null, function() {if ( window.advanced_ads_pro ) {advanced_ads_pro.process_passive_cb();} else if ( window.console && window.console.log ) {console.log('Advanced Ads Pro: cache-busting can not be initialized');} });</script><!--/noptimize--><script type="text/javascript">var advads_tracking_ads = {};var advads_tracking_urls = [];var advads_gatracking_uids = [];var advads_tracking_methods = [];var advads_tracking_parallel = [];var advads_tracking_linkbases = [];var advads_gatracking_allads = [];var advads_gatracking_anonym = true;</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"d5f0c153db","applicationID":"260065271","transactionName":"NAZTNhdRDUYFUhJaVw1McAERWQxbS0IPXV8PBg==","queueTime":0,"applicationTime":3045,"atts":"GEFQQF9LHkg=","errorBeacon":"bam.nr-data.net","agent":""}</script></body></html>

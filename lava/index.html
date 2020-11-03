@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <link rel="stylesheet" href="style.css">
+</head> 
+<body> 
+<header class="header"> 
+    <!-- hamburger menu-->
+    <div class="menu-container"> 
+        <div class="menu"  id="menu"> 
+            &#9776;
+        </div> 
+        <div class="menu-list" id="menu"> 
+            <ul>
+                <li>  <a href="#"> about</a>  </li>
+                <li> <a href="#"> articales</a></li>
+                <li> <a href="#"> subscribe</a></li>
+            </ul> 
+        </div>
+    </div>
+     <!-- end hamburger menu--> 
+
+    <div class="container">
+<div class="logo "> 
+ <h1>L</h1>
+</div> 
+<nav class="nav hide"> 
+    <ul>
+        <li>  <a href="#"> about</a>  </li>
+        <li> <a href="#"> articales</a></li>
+        <li> <a href="#"> subscribe</a></li>
+    </ul> 
+</nav>  
+</div> 
+
+
+
+<div class="content-top"> 
+    <h1>Lava</h1> 
+    <p class="text-blue">a human exploration</p> 
+    <hr class="line-xl">  
+</div> 
+
+<div class="content-bottom"> 
+    <h1 class="text-lg">slow traveling </h1> 
+    <p class="text-xl">a travel blog</p> 
+    <hr class="line-xl"> 
+    <p class="text-xl">a travel blog that brings the beauty of the moment in a <picture></picture> Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, fuga.</p> 
+</div>
+</header> 
+
+<!-- section 1-->
+<section class="section"> 
+    <h1 class="text-lg">Latest artiales </h1> 
+    <p class="text-xl">a travel blog</p> 
+    <hr class="line-xl"> 
+
+    <div class="image-tables"> 
+
+        <div class="card"> 
+            <div class="card-content"> 
+                <h2>tunza</h2>
+               <p>Lorem ipsum dolor sit amet.</p> 
+               <hr>
+            </div>
+         </div> 
+           <div class="card"> 
+            <div class="card-content"> 
+                <h2> timor</h2>
+                <p>Lorem ipsum dolor sit amet.</p> 
+                <hr>
+            </div>
+            </div> 
+
+            <div class="card"> 
+                <div class="card-content"> 
+                    <h2>lombok</h2>
+                    <p>Lorem ipsum dolor sit amet.</p> 
+                    <hr>
+                </div>
+                </div>
+       </div> 
+</section>
+
+<form  class="form"> 
+    <h1 class="text-lg">Subscribe</h1> 
+    <p class="text-xl">a travel blog</p> 
+    <input type="text" name="Search" placeholder="Search"> <br>
+    <button>submit</button>
+</form> 
+
+ <!-- footer-->
+<footer class="footer"> 
+    <div class="container">
+        <div class="logo"> 
+         <h1>L</h1>
+        </div> 
+        <nav class="nav nav-footer"> 
+            <ul>
+                <li>  <a href="#"> about</a>  </li>
+                <li> <a href="#"> articales</a></li>
+                <li> <a href="#"> subscribe</a></li>
+            </ul> 
+        </nav>  
+        </div> 
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>  
+ var menu = document.getElementById("menu");
+   menu.onclick = function() { 
+            this.classList.toggle("active");
+            var menuList = this.nextElementSibling;
+            if (menuList .style.maxHeight) {
+                menuList.style.maxHeight = null;
+            } else {
+                menuList.style.maxHeight = menuList.scrollHeight + "px";
+            } 
+          }
+</script>
+</body> 
+</html>

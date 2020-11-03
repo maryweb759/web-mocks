@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> my portofolio</title> 
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body> 
+   
+    <header class="header"> 
+       <div>
+     <div class="navbar" id="navbar"> 
+        <div class="logo"> M</div> 
+        <nav class="nav"> 
+        <div class="toggle" id="burger-menu"><span></span></div>
+        <ul class="list" id="list"> 
+           <li> <a href="#self-section">Home</a></li>
+           <li> <a href="#about-me">About me</a></li>
+           <li> <a href="#my-skills">My skills</a></li>
+           <li> <a href="#my-work">  My work</a></li>
+           <li> <a href="#">Contact</a></li>
+        </ul>
+         </nav> 
+    </div> 
+   </div>
+    </header> 
+
+    <main class="main"> 
+
+        <section id="self-section" class="self-section"> 
+          <div class="container"> 
+            <div class="self-itroduction"> 
+                <div class="self-itroduction-content"  > 
+                <p class="txt-md">Hi, I am Meriem</p> 
+                <p class="txt-lg">welcome to my portofolio</p>
+                </div> 
+            </div> 
+            <div class="skew-bg" id="about-me"></div>
+         </div> 
+        </section>
+        <!-- about me section --> 
+        <section  class="about-me"> 
+          <div class="container"> 
+              <div class="about-me-content"> 
+                  <div> 
+                     <h1 class=""> About Me</h1> 
+                     <p class="text-md"> 
+                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus deleniti animi optio magnam corrupti? Nam omnis incidunt adipisci sed voluptate.
+                     </p>
+                  </div> 
+                  <div> 
+                    <div class="img"> <img  src="img/2.jpeg" alt="my personal image"></div>
+                  </div> 
+              </div>
+            
+          </div> 
+          <div  id="my-skills"></div>
+        </section> 
+
+        <!-- my skills section--> 
+        <section class="my-skill"> 
+            <div class="container"> 
+                <h1 class="text-dark">My skills</h1>
+                <div class="my-skills-content"> 
+                   <progress value="80" max="100"> </progress>  <span>HTML335&nbsp;&nbsp;80%</span> 
+                   <progress value="70" max="100">  </progress> <span>CSS3&nbsp;&nbsp;70%</span> 
+                   <progress value="50" max="100"></progress> <span>JAVASCRIPT&nbsp;&nbsp;50%</span> 
+                   <progress value="60" max="100"></progress> <span>Bootstrap&nbsp;&nbsp;60%</span> 
+                   <progress value="60" max="100"></progress> <span>sass&nbsp;&nbsp;60%</span> 
+                   
+                </div>
+            </div>
+        </section> 
+
+         <!-- my work section-->  
+         <section id="my-work" class="my-work"> 
+             <div class="container"> 
+                 <div class="my-work-content"> 
+                     <h1 class="text-dark"> my work</h1>
+                     <div class="my-project"> 
+                         <div class="my-project-img"> 
+                            <div> <img src="img/netflex.jpg" alt="netflex-project"> </div> 
+                            <div  class="bottom-content"> <span> <a href="https://github.com/maryweb759/web-mocks" target="_blank"> github</a></span>  <span> <a href="index.html" target="_blank"> website</a> </span>   
+                            </div>
+                         </div>   
+                         <div class="my-project-img"> 
+                            <div> <img  src="img/googles.jpg" alt="google-project"> </div> 
+                            <div class="bottom-content"> <span> <a href="index.html" target="_blank"> github</a></span>  <span> <a href="index.html" target="_blank"> website</a> </span>   
+                            </div>
+                         </div>   
+                         <div class="my-project-img"> 
+                            <div> <img src="img/lava.jpg" alt="lava-project"> </div> 
+                            <div  class="bottom-content"> <span> <a href="index.html" target="_blank"> github</a></span>  <span> <a href="index.html" target="_blank"> website</a> </span> </div>
+                         </div>   
+                  
+                    </div>
+                 </div>
+             </div>
+         </section>
+    </main> 
+ 
+   <footer class="footer"> 
+       <div class="container"> 
+           <div class="footer-content"> 
+            &copy; all right reserved 
+           </div>
+       </div>
+   
+   </footer>
+
+
+
+
+
+
+
+
+
+
+
+    <script> 
+   // navbar style
+    function scrollTop() {
+        let navbar = document.getElementById("navbar");
+         let ops = window.pageYOffset; 
+       if(ops > 290) { 
+       navbar.style.height = "2.5rem"; 
+
+        } else { 
+      navbar.style.height = "3rem ";
+     
+       }
+        } 
+    window.addEventListener("scroll", scrollTop);   
+    // burger-menu 
+    var burgerMenu = document.getElementById("burger-menu"); 
+    var overly = document.getElementById("list"); 
+    var navbar_list_A = document.querySelectorAll(".list a"); 
+    navbar_list_A.forEach(elem => 
+    elem.addEventListener("click", navbarLinkClick)); 
+    function navbarLinkClick(event) { 
+        smothScroll(event) // call the "smooth" function
+       if (overly.classList.contains("overly")) { 
+        burgerMenu.click();
+       }
+    };
+    
+    burgerMenu.addEventListener('click', function() { 
+        this.classList.toggle("close"); 
+        overly.classList.toggle("overly");
+    }); 
+   
+
+   // Approach 3 
+   function smothScroll(event) {
+  event.preventDefault();
+  const targetId = event.currentTarget.getAttribute("href")==="#" ? "header" : event.currentTarget.getAttribute("href");
+  const targetPosition = document.querySelector(targetId).offsetTop;
+  const startPosition = window.pageYOffset;
+  const distance = targetPosition - startPosition;
+  const duration = 1000;
+  let start = null;
+  
+  window.requestAnimationFrame(step);
+
+  function step(timestamp) {
+    if (!start) start = timestamp;
+    const progress = timestamp - start;
+    // window.scrollTo(0, distance*(progress/duration) + startPosition);
+    window.scrollTo(0, easeInOutQuad(progress, startPosition, distance, duration));
+    if (progress < duration) window.requestAnimationFrame(step);
+  }
+}
+
+// Easing Functions
+
+function easeInOutQuad(t, b, c, d) {
+	t /= d/2;
+	if (t < 1) return c/2*t*t + b;
+	t--;
+	return -c/2 * (t*(t-2) - 1) + b;
+};
+
+    </script>
+</body>
+</html>
